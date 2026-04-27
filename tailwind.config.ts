@@ -19,6 +19,13 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        terracota: "hsl(var(--terracota))",
+        champagne: "hsl(var(--champagne))",
+        ocean: "hsl(var(--ocean))",
+        "off-white": "hsl(var(--off-white))",
+        olive: "hsl(var(--olive))",
+        "dark-text": "hsl(var(--dark-text))",
+        gold: "hsl(var(--gold))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
