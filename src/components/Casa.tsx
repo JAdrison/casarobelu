@@ -1,0 +1,88 @@
+import veranda from "@/assets/gallery-veranda.jpg";
+import pool from "@/assets/gallery-pool.jpg";
+import aerial from "@/assets/gallery-aerial.jpg";
+
+const amenities = [
+  "Piscina 4m × 8m (1,40m)",
+  "Deck com churrasqueira e freezer",
+  "Varanda com redes",
+  "Campo de vôlei",
+  "Cozinha equipada",
+  "Wi-Fi disponível",
+  "Enxoval completo",
+  "Estacionamento privativo",
+];
+
+export const Casa = () => (
+  <section id="casa" className="bg-champagne py-28 md:py-40 px-6">
+    <div className="max-w-7xl mx-auto space-y-32">
+      {/* 3A */}
+      <div id="estrutura" className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div className="reveal order-2 md:order-1">
+          <p className="eyebrow mb-6">A Casa</p>
+          <h2 className="font-display text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
+            Oito quartos. <span className="italic">Uma experiência.</span>
+          </h2>
+          <div className="w-16 h-px bg-terracota my-8" />
+          <p className="text-[17px] leading-[1.9] text-dark-text/75">
+            São 8 quartos cuidadosamente distribuídos — 2 suítes com ar-condicionado e
+            cama casal, 3 suítes com ventilador, 1 quarto casal com ventilador, 1 quarto
+            com 2 camas de solteiro e 1 quarto externo com 5 camas. Um espaço pensado
+            para reunir família e amigos sem concessões de conforto.
+          </p>
+        </div>
+        <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
+          <img src={veranda} alt="Varanda com redes da Casa Robelú" loading="lazy" width={1024} height={1280}
+            className="w-full aspect-[4/5] object-cover shadow-[var(--shadow-elegant)]" />
+          <div className="absolute -bottom-6 -left-6 hidden md:block w-32 h-32 border border-terracota/40" />
+        </div>
+      </div>
+
+      {/* 3B */}
+      <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div className="reveal order-1">
+          <img src={pool} alt="Piscina e deck com vista para o mar" loading="lazy" width={1280} height={1280}
+            className="w-full aspect-square object-cover shadow-[var(--shadow-elegant)]" />
+        </div>
+        <div className="reveal reveal-delay-1 order-2">
+          <p className="eyebrow mb-6">Lazer & Conforto</p>
+          <h2 className="font-display text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
+            Refúgio completo, <span className="italic">do deck ao mar.</span>
+          </h2>
+          <div className="w-16 h-px bg-terracota my-8" />
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+            {amenities.map((a) => (
+              <li key={a} className="flex items-start gap-3 text-dark-text/80 text-[15px]">
+                <span className="mt-2 w-1 h-1 bg-terracota shrink-0" />
+                {a}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* 3C */}
+      <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div className="reveal order-2 md:order-1">
+          <p className="eyebrow mb-6">Acesso & História</p>
+          <h2 className="font-display text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
+            Quarenta anos de história
+            <br />
+            <span className="italic">neste pedaço do Ceará.</span>
+          </h2>
+          <div className="w-16 h-px bg-terracota my-8" />
+          <p className="text-[17px] leading-[1.9] text-dark-text/75">
+            O proprietário conhece cada maré, cada trilha, cada segredo de Morro Branco
+            há quase 40 anos. O translado é seguro, orientado pelas marés e sem nenhuma
+            dificuldade — você chega, desfruta e descansa.
+          </p>
+        </div>
+        <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
+          <img src={aerial} alt="Vista aérea da Casa Robelú nas falésias" loading="lazy" width={1600} height={1024}
+            className="w-full aspect-[5/4] object-cover shadow-[var(--shadow-elegant)]" />
+          <div className="absolute -top-6 -right-6 hidden md:block w-32 h-32 border border-terracota/40" />
+        </div>
+      </div>
+    </div>
+  </section>
+);

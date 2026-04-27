@@ -1,0 +1,41 @@
+import { Lock, Waves, Users } from "lucide-react";
+
+const pillars = [
+  { icon: Lock, title: "Privacidade Total", text: "Acesso exclusivo. Sem vizinhos, sem compromissos." },
+  { icon: Waves, title: "Vista 180° para o Mar", text: "Falésias, coqueiros e horizonte infinito." },
+  { icon: Users, title: "Para Grupos de Até 23", text: "Oito quartos. Estrutura completa para reunir os seus." },
+];
+
+export const Promise = () => (
+  <section className="bg-off-white py-28 md:py-40 px-6">
+    <div className="max-w-4xl mx-auto text-center">
+      <p className="reveal eyebrow mb-8">
+        <span className="ornament" /> Morro Branco — Beberibe, CE <span className="ornament" />
+      </p>
+      <h2 className="reveal reveal-delay-1 font-display text-4xl md:text-6xl text-dark-text leading-[1.1] text-balance">
+        Não é uma casa de praia.
+        <br />
+        <span className="italic">É um destino.</span>
+      </h2>
+      <p className="reveal reveal-delay-2 mt-10 text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto">
+        A Casa Robelú nasceu para grupos que recusam o comum. Com vista privilegiada
+        de 180° para o mar, falésias em tons de terracota ao redor e estrutura
+        completa para até 23 pessoas, cada estadia aqui se torna uma memória
+        que não se esquece.
+      </p>
+    </div>
+
+    <div className="max-w-6xl mx-auto mt-24 grid md:grid-cols-3 gap-px bg-border">
+      {pillars.map((p, i) => (
+        <div
+          key={p.title}
+          className={`reveal reveal-delay-${i + 1} bg-off-white p-10 md:p-12 text-center group`}
+        >
+          <p.icon className="w-7 h-7 mx-auto text-terracota stroke-[1.2]" />
+          <h3 className="font-display text-2xl mt-6 text-dark-text">{p.title}</h3>
+          <p className="font-serif-italic italic text-lg text-muted-foreground mt-3">{p.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+);
