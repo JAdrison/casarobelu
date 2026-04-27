@@ -1,16 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useReveal } from "@/hooks/useReveal";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Promise } from "@/components/Promise";
+import { Casa } from "@/components/Casa";
+import { Experiencias } from "@/components/Experiencias";
+import { Galeria } from "@/components/Galeria";
+import { Depoimentos } from "@/components/Depoimentos";
+import { Stats } from "@/components/Stats";
+import { Reservas } from "@/components/Reservas";
+import { Footer } from "@/components/Footer";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useReveal();
+
+  useEffect(() => {
+    document.title = "Casa Robelú · Refúgio nas Falésias de Morro Branco · Ceará";
+    const setMeta = (name: string, content: string) => {
+      let el = document.querySelector(`meta[name="${name}"]`);
+      if (!el) { el = document.createElement("meta"); el.setAttribute("name", name); document.head.appendChild(el); }
+      el.setAttribute("content", content);
+    };
+    setMeta("description", "Casa Robelú — refúgio exclusivo nas falésias de Morro Branco, Beberibe/CE. Até 23 hóspedes, vista 180° para o mar e privacidade total.");
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="bg-off-white text-dark-text overflow-x-hidden">
+      <Navbar />
+      <Hero />
+      <Promise />
+      <Casa />
+      <Experiencias />
+      <Galeria />
+      <Depoimentos />
+      <Stats />
+      <Reservas />
+      <Footer />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
