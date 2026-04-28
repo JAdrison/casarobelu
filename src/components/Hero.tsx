@@ -89,20 +89,34 @@ export const Hero = () => {
           inesquecíveis acima de qualquer coisa.
         </p>
 
-        <div className="anim-fade-up anim-d4 mt-10 sm:mt-12 w-full sm:w-auto px-4 sm:px-0">
+        <div className="anim-fade-up anim-d4 mt-10 sm:mt-12 w-full sm:w-auto px-4 sm:px-0 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#reservas"
             className="inline-flex items-center justify-center gap-3 w-full sm:w-auto font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:brightness-110 hover:-translate-y-0.5"
             style={{
-              background: "#C4915A",
+              background: "#A0522D",
               color: "#FAF7F2",
               padding: "16px 40px",
               letterSpacing: "0.15em",
               borderRadius: "2px",
-              boxShadow: "0 14px 36px -14px rgba(196,145,90,0.6)",
+              boxShadow: "0 14px 36px -14px rgba(160,82,45,0.6)",
             }}
           >
             Verificar Disponibilidade <span aria-hidden>→</span>
+          </a>
+          <a
+            href="#casa"
+            className="inline-flex items-center justify-center gap-3 w-full sm:w-auto font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:bg-white/10 hover:-translate-y-0.5"
+            style={{
+              background: "transparent",
+              color: "#FAF7F2",
+              padding: "16px 40px",
+              letterSpacing: "0.15em",
+              borderRadius: "2px",
+              border: "1px solid rgba(255,255,255,0.7)",
+            }}
+          >
+            Conhecer a Casa
           </a>
         </div>
 

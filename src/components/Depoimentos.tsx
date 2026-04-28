@@ -1,3 +1,5 @@
+import { Star } from "lucide-react";
+
 const items = [
   {
     text: "A vista para as falésias ao amanhecer foi inesquecível. Reunimos a família inteira e todos querem voltar.",
@@ -38,12 +40,19 @@ export const Depoimentos = () => (
             >
               “
             </span>
+            <div className="relative flex gap-1 mb-4">
+              {Array.from({ length: 5 }).map((_, idx) => (
+                <Star key={idx} className="w-4 h-4 fill-gold text-gold" strokeWidth={0} />
+              ))}
+            </div>
             <blockquote className="relative font-serif-italic italic text-base sm:text-lg md:text-xl text-dark-text leading-relaxed">
               {t.text}
             </blockquote>
             <figcaption className="mt-8 pt-6 border-t border-border">
               <p className="font-sans-soft text-[13px] tracking-[0.2em] uppercase text-terracota">{t.name}</p>
-              <p className="font-serif-italic italic text-muted-foreground mt-1">{t.city}</p>
+              <p className="font-serif-italic italic text-muted-foreground mt-1">
+                {t.city} · <span className="text-[11px] tracking-wider uppercase not-italic font-sans-soft">via Google</span>
+              </p>
             </figcaption>
           </figure>
         ))}

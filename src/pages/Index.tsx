@@ -6,10 +6,11 @@ import { Casa } from "@/components/Casa";
 import { Experiencias } from "@/components/Experiencias";
 import { Galeria } from "@/components/Galeria";
 import { Depoimentos } from "@/components/Depoimentos";
-
+import { Eventos } from "@/components/Eventos";
 import { Stats } from "@/components/Stats";
 import { Reservas } from "@/components/Reservas";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -33,11 +34,12 @@ const Index = () => {
       <Casa />
       <Experiencias />
       <Galeria />
+      <Eventos />
       <Depoimentos />
-      
       <Stats />
       <Reservas />
       <Footer />
+      <WhatsAppFloat />
     </main>
   );
 };

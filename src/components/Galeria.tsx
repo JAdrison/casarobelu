@@ -5,50 +5,13 @@ import g4 from "@/assets/galeria-4.webp";
 import g5 from "@/assets/galeria-5.webp";
 import g6 from "@/assets/galeria-6.webp";
 
-type Tile = { src: string; alt: string; cls: string };
-
-/**
- * Masonry grid — desktop (4 cols × 4 rows):
- *  ┌───────────┬─────┬─────┐
- *  │  g3 wide  │ g1  │ g6  │   row 1-2 (g3 spans col 1-2 row 1)
- *  │           │ tall│     │
- *  ├───────────┤     ├─────┤
- *  │  g5 wide  │     │ g4  │   row 2 (g5 spans col 1-2 row 2)
- *  ├───────────┴─────┴─────┤
- *  │       g2 panorâmica    │   row 3 (full width)
- *  └────────────────────────┘
- */
-const tiles: Tile[] = [
-  {
-    src: g3,
-    alt: "Vista panorâmica com coqueiros e mar",
-    cls: "md:col-span-2 md:row-span-1 md:col-start-1 md:row-start-1",
-  },
-  {
-    src: g1,
-    alt: "Falésia, casa e piscina",
-    cls: "md:col-span-1 md:row-span-2 md:col-start-3 md:row-start-1",
-  },
-  {
-    src: g6,
-    alt: "Capelinha com falésia ao fundo",
-    cls: "md:col-span-1 md:row-span-1 md:col-start-4 md:row-start-1",
-  },
-  {
-    src: g5,
-    alt: "Área gourmet com churrasqueira",
-    cls: "md:col-span-2 md:row-span-1 md:col-start-1 md:row-start-2",
-  },
-  {
-    src: g4,
-    alt: "Deck com mesa e vista para o mar",
-    cls: "md:col-span-1 md:row-span-1 md:col-start-4 md:row-start-2",
-  },
-  {
-    src: g2,
-    alt: "Passarela com coqueiros e vista para o mar",
-    cls: "md:col-span-4 md:row-span-1 md:col-start-1 md:row-start-3",
-  },
+const tiles = [
+  { src: g3, alt: "Vista panorâmica com coqueiros e mar" },
+  { src: g1, alt: "Falésia, casa e piscina" },
+  { src: g6, alt: "Capelinha com falésia ao fundo" },
+  { src: g5, alt: "Área gourmet com churrasqueira" },
+  { src: g4, alt: "Deck com mesa e vista para o mar" },
+  { src: g2, alt: "Passarela com coqueiros e vista para o mar" },
 ];
 
 export const Galeria = () => (
