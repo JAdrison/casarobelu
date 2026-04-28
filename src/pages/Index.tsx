@@ -5,6 +5,7 @@ import { Promise } from "@/components/Promise";
 import { Casa } from "@/components/Casa";
 import { Experiencias } from "@/components/Experiencias";
 import { Galeria } from "@/components/Galeria";
+import { Depoimentos } from "@/components/Depoimentos";
 
 import { Stats } from "@/components/Stats";
 import { Reservas } from "@/components/Reservas";
@@ -21,7 +22,7 @@ const Index = () => {
       if (!el) { el = document.createElement("meta"); el.setAttribute("name", name); document.head.appendChild(el); }
       el.setAttribute("content", content);
     };
-    setMeta("description", "Casa Robelú — refúgio exclusivo nas falésias de Morro Branco, Beberibe/CE. Até 23 hóspedes, vista 180° para o mar e privacidade total.");
+    setMeta("description", "Casa Robelú — refúgio exclusivo nas falésias de Morro Branco, Beberibe/CE. Até 10 hóspedes, vista 180° para o mar e privacidade total.");
   }, []);
 
   return (
@@ -32,6 +33,7 @@ const Index = () => {
       <Casa />
       <Experiencias />
       <Galeria />
+      <Depoimentos />
       
       <Stats />
       <Reservas />

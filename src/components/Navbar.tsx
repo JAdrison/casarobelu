@@ -49,11 +49,7 @@ export const Navbar = () => {
 
         <a
           href="#reservas"
-          className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-[12px] tracking-[0.2em] uppercase border transition-all ${
-            scrolled
-              ? "border-terracota text-terracota hover:bg-terracota hover:text-off-white"
-              : "border-off-white/70 text-off-white hover:bg-off-white hover:text-terracota"
-          }`}
+          className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 text-[12px] tracking-[0.2em] uppercase bg-terracota text-off-white hover:bg-terracota/90 transition-all shadow-[var(--shadow-elegant)]"
         >
           Reservar
         </a>
