@@ -7,14 +7,48 @@ import g6 from "@/assets/galeria-6.jpg";
 
 type Tile = { src: string; alt: string; cls: string };
 
-// Masonry: large (col-span-2), medium x2, tall (row-span-2), small x2
+/**
+ * Masonry grid — desktop (4 cols × 4 rows):
+ *  ┌───────────┬─────┬─────┐
+ *  │  g3 wide  │ g1  │ g6  │   row 1-2 (g3 spans col 1-2 row 1)
+ *  │           │ tall│     │
+ *  ├───────────┤     ├─────┤
+ *  │  g5 wide  │     │ g4  │   row 2 (g5 spans col 1-2 row 2)
+ *  ├───────────┴─────┴─────┤
+ *  │       g2 panorâmica    │   row 3 (full width)
+ *  └────────────────────────┘
+ */
 const tiles: Tile[] = [
-  { src: g3, alt: "Vista aérea / fachada da Casa Robelú", cls: "md:col-span-2 md:row-span-1 aspect-[16/9]" },
-  { src: g6, alt: "Falésia ao pôr do sol", cls: "md:row-span-2 aspect-[3/4] md:aspect-auto md:h-full" },
-  { src: g1, alt: "Piscina e área de lazer", cls: "aspect-[4/3]" },
-  { src: g4, alt: "Varanda com vista panorâmica", cls: "aspect-[4/3]" },
-  { src: g5, alt: "Espaço gourmet e churrasqueira", cls: "aspect-[4/3]" },
-  { src: g2, alt: "Espreguiçadeiras à beira-mar", cls: "aspect-[4/3]" },
+  {
+    src: g3,
+    alt: "Vista panorâmica com coqueiros e mar",
+    cls: "md:col-span-2 md:row-span-1 md:col-start-1 md:row-start-1",
+  },
+  {
+    src: g1,
+    alt: "Falésia, casa e piscina",
+    cls: "md:col-span-1 md:row-span-2 md:col-start-3 md:row-start-1",
+  },
+  {
+    src: g6,
+    alt: "Capelinha com falésia ao fundo",
+    cls: "md:col-span-1 md:row-span-1 md:col-start-4 md:row-start-1",
+  },
+  {
+    src: g5,
+    alt: "Área gourmet com churrasqueira",
+    cls: "md:col-span-2 md:row-span-1 md:col-start-1 md:row-start-2",
+  },
+  {
+    src: g4,
+    alt: "Deck com mesa e vista para o mar",
+    cls: "md:col-span-1 md:row-span-1 md:col-start-4 md:row-start-2",
+  },
+  {
+    src: g2,
+    alt: "Passarela com coqueiros e vista para o mar",
+    cls: "md:col-span-4 md:row-span-1 md:col-start-1 md:row-start-3",
+  },
 ];
 
 export const Galeria = () => (
@@ -29,11 +63,18 @@ export const Galeria = () => (
         </h2>
       </div>
 
-      <div className="reveal grid grid-cols-1 md:grid-cols-3 md:auto-rows-[260px] gap-4 md:gap-5">
+      <div
+        className="
+          reveal
+          grid
+          grid-cols-2 gap-1
+          md:grid-cols-4 md:grid-rows-[280px_280px_360px] md:gap-2
+        "
+      >
         {tiles.map((t, i) => (
           <figure
             key={i}
-            className={`relative overflow-hidden group shadow-[var(--shadow-elegant)] ${t.cls}`}
+            className={`relative overflow-hidden group ${t.cls}`}
           >
             <img
               src={t.src}
@@ -41,7 +82,7 @@ export const Galeria = () => (
               loading={i < 2 ? "eager" : "lazy"}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-dark-text/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-dark-text/0 group-hover:bg-dark-text/30 transition-colors duration-300" />
           </figure>
         ))}
       </div>
