@@ -58,31 +58,76 @@ export const Hero = () => {
       </div>
 
       <div className="relative min-h-[100svh] md:min-h-[820px] lg:min-h-[900px] flex flex-col items-center justify-center text-center px-5 sm:px-6 py-24">
-        <p
-          className="anim-fade-up anim-d1 font-sans-soft text-[10px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase text-off-white mb-6 sm:mb-8"
-          style={{ textShadow: "0 2px 12px hsl(var(--dark-text) / 0.6)" }}
-        >
-          <span className="ornament" /> Morro Branco · Ceará <span className="ornament" />
-        </p>
+        <span
+          aria-hidden
+          className="anim-fade-up anim-d1 block mx-auto mb-6 sm:mb-8"
+          style={{ width: 60, height: 0, borderTop: "2px solid #C4915A" }}
+        />
 
-        <h1 className="anim-fade-up anim-d2 font-display italic text-off-white text-[2.5rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-[88px] leading-[1.05] text-balance max-w-5xl">
+        <h1
+          className="anim-fade-up anim-d2 font-display italic text-off-white leading-[1.05] text-balance max-w-5xl"
+          style={{
+            fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
+            fontWeight: 500,
+            textShadow: "0 4px 24px rgba(0,0,0,0.45)",
+          }}
+        >
           Onde as falésias
           <br />
           encontram o horizonte.
         </h1>
 
-        <p className="anim-fade-up anim-d3 font-serif-italic font-light text-off-white/85 text-base sm:text-xl md:text-2xl mt-6 sm:mt-8 max-w-2xl text-balance px-2">
+        <p
+          className="anim-fade-up anim-d3 font-serif-italic font-light mt-6 sm:mt-8 text-base sm:text-lg md:text-xl px-2"
+          style={{
+            color: "rgba(255,255,255,0.85)",
+            letterSpacing: "0.08em",
+            maxWidth: 520,
+          }}
+        >
           Um refúgio exclusivo em Morro Branco para quem escolhe momentos
           inesquecíveis acima de qualquer coisa.
         </p>
 
         <div className="anim-fade-up anim-d4 mt-10 sm:mt-12 w-full sm:w-auto px-4 sm:px-0">
-          <a href="#reservas" className="btn-hero w-full sm:w-auto justify-center">
+          <a
+            href="#reservas"
+            className="inline-flex items-center justify-center gap-3 w-full sm:w-auto font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:brightness-110 hover:-translate-y-0.5"
+            style={{
+              background: "#C4915A",
+              color: "#FAF7F2",
+              padding: "16px 40px",
+              letterSpacing: "0.15em",
+              borderRadius: "2px",
+              boxShadow: "0 14px 36px -14px rgba(196,145,90,0.6)",
+            }}
+          >
             Verificar Disponibilidade <span aria-hidden>→</span>
           </a>
         </div>
 
-        <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
+        {/* Badge de localização */}
+        <div
+          className="anim-fade-up anim-d3 absolute bottom-6 sm:bottom-10 left-5 sm:left-8 inline-flex items-center gap-2 px-3.5 py-2 sm:px-4 sm:py-2.5 backdrop-blur-md"
+          style={{
+            background: "rgba(0,0,0,0.45)",
+            border: "1px solid rgba(255,255,255,0.15)",
+            borderRadius: "2px",
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C4915A" strokeWidth="1.6" className="shrink-0">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span
+            className="text-[10px] sm:text-[11px] text-off-white"
+            style={{ fontFamily: "'Quicksand', sans-serif", fontVariant: "small-caps", letterSpacing: "0.22em", fontWeight: 500 }}
+          >
+            Morro Branco · Ceará
+          </span>
+        </div>
+
+        <div className="hidden sm:block absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
           <svg width="22" height="36" viewBox="0 0 22 36" fill="none" className="text-off-white/70">
             <rect x="1" y="1" width="20" height="34" rx="10" stroke="currentColor" strokeWidth="1" />
             <circle cx="11" cy="10" r="2" fill="currentColor" />
