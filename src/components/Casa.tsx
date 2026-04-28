@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import pool from "@/assets/gallery-pool.jpg";
-import aerial from "@/assets/gallery-aerial.jpg";
+import pool from "@/assets/lazer-piscina.jpg";
+import aerial from "@/assets/acesso-historia.jpg";
 import quarto1 from "@/assets/quarto-1.jpg";
 import quarto2 from "@/assets/quarto-2.jpg";
 import quarto3 from "@/assets/quarto-3.jpg";
@@ -79,7 +79,7 @@ export const Casa = () => (
       <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
         <div className="reveal order-1">
           <img src={pool} alt="Piscina e deck com vista para o mar" loading="lazy" width={1280} height={1280}
-            className="w-full aspect-square object-cover shadow-[var(--shadow-elegant)]" />
+            className="w-full aspect-square object-cover object-center shadow-[var(--shadow-elegant)]" />
         </div>
         <div className="reveal reveal-delay-1 order-2">
           <p className="eyebrow mb-6">Lazer & Conforto</p>
