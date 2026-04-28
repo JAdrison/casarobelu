@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import pool from "@/assets/gallery-pool.jpg";
-import aerial from "@/assets/gallery-aerial.jpg";
+import pool from "@/assets/lazer-piscina.jpg";
+import aerial from "@/assets/acesso-historia.jpg";
 import quarto1 from "@/assets/quarto-1.jpg";
 import quarto2 from "@/assets/quarto-2.jpg";
 import quarto3 from "@/assets/quarto-3.jpg";
