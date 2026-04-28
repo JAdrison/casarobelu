@@ -212,3 +212,9 @@
     background: hsl(var(--off-white) / 0.18);
   }
 }
+
+/* ============ Promise: padding responsivo ============ */
+.promise-section { padding: 72px 20px; }
+@media (min-width: 768px) {
+  .promise-section { padding: 100px 24px; }
+}
