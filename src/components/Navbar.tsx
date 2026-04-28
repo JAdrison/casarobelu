@@ -24,8 +24,12 @@ export const Navbar = () => {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-        <a href="#top" className={`font-display text-2xl tracking-wide ${scrolled ? "text-terracota" : "text-off-white"}`}>
-          Casa <span className="italic font-serif-italic">Robelú</span>
+        <a
+          href="#top"
+          style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
+          className={`text-2xl tracking-wide ${scrolled ? "text-terracota" : "text-off-white"}`}
+        >
+          Casa Robelú
         </a>
 
         <ul className="hidden md:flex items-center gap-10">
