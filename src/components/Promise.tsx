@@ -3,7 +3,7 @@ import { Lock, Waves, Users } from "lucide-react";
 const pillars = [
   { icon: Lock, title: "Privacidade Total", text: "Acesso exclusivo. Sem vizinhos, sem compromissos." },
   { icon: Waves, title: "Vista 180° para o Mar", text: "Falésias, coqueiros e horizonte infinito." },
-  { icon: Users, title: "Para Grupos de Até 23", text: "Oito quartos. Estrutura completa para reunir os seus." },
+  { icon: Users, title: "Para Grupos de Até 10", text: "Oito quartos. Estrutura completa para reunir os seus. Grupos maiores sob consulta." },
 ];
 
 export const Promise = () => (
@@ -20,8 +20,12 @@ export const Promise = () => (
       <p className="reveal reveal-delay-2 mt-10 text-[17px] leading-[1.85] text-muted-foreground max-w-2xl mx-auto">
         A Casa Robelú nasceu para grupos que recusam o comum. Com vista privilegiada
         de 180° para o mar, falésias em tons de terracota ao redor e estrutura
-        completa para até 23 pessoas, cada estadia aqui se torna uma memória
+        completa para até 10 pessoas, cada estadia aqui se torna uma memória
         que não se esquece.
+      </p>
+      <p className="reveal reveal-delay-3 mt-8 inline-flex items-center gap-2 text-[12px] text-gold" style={{ fontFamily: "'Quicksand', sans-serif" }}>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Estadia mínima de 2 noites · Check-in 9h · Check-out 16h
       </p>
     </div>
 
