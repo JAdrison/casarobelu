@@ -70,8 +70,7 @@ export const Casa = () => (
           </p>
         </div>
         <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
-          <img src={veranda} alt="Varanda com redes da Casa Robelú" loading="lazy" width={1024} height={1280}
-            className="w-full aspect-[4/5] object-cover shadow-[var(--shadow-elegant)]" />
+          <QuartoSlideshow />
           <div className="absolute -bottom-6 -left-6 hidden md:block w-32 h-32 border border-terracota/40" />
         </div>
       </div>
