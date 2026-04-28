@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Calendar, Wallet, Users } from "lucide-react";
-import ctaBg from "@/assets/cta-night.jpg";
+import ctaBg from "@/assets/reservas-bg.jpg";
 
 const WHATSAPP = "https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA.";
 
