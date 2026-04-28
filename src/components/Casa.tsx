@@ -14,7 +14,7 @@ const QuartoSlideshow = () => {
     return () => clearInterval(id);
   }, []);
   return (
-    <div className="relative w-full aspect-[4/5] overflow-hidden shadow-[var(--shadow-elegant)]">
+    <div className="relative w-full overflow-hidden rounded-[4px] shadow-[0_12px_40px_rgba(0,0,0,0.12)] h-[260px] md:h-[420px]">
       {quartoSlides.map((src, idx) => (
         <img
           key={src}
@@ -70,13 +70,7 @@ export const Casa = () => (
           </p>
         </div>
         <div className="reveal reveal-delay-1 casa-media">
-          <img
-            src={pool}
-            alt="Piscina com vista para a falésia — Casa Robelú"
-            loading="lazy"
-            decoding="async"
-            className="casa-img"
-          />
+          <QuartoSlideshow />
         </div>
       </div>
 
