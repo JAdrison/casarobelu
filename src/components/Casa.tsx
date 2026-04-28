@@ -70,13 +70,9 @@ export const Casa = () => (
           </p>
         </div>
         <div className="reveal reveal-delay-1 casa-media">
-          <img
-            src={pool}
-            alt="Piscina com vista para a falésia — Casa Robelú"
-            loading="lazy"
-            decoding="async"
-            className="casa-img"
-          />
+          <div className="casa-img p-0 overflow-hidden relative" style={{ height: undefined }}>
+            <QuartoSlideshow />
+          </div>
         </div>
       </div>
 
