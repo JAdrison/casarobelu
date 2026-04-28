@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-cliffs.jpg";
+import heroImg from "@/assets/hero-casa-aerial.jpg";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -22,8 +22,20 @@ export const Hero = () => {
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 bg-dark-text/20" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, hsl(var(--dark-text) / 0.35) 0%, hsl(var(--dark-text) / 0.25) 40%, hsl(var(--dark-text) / 0.7) 80%, hsl(var(--dark-text) / 0.92) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0 mix-blend-multiply"
+          style={{
+            background:
+              "linear-gradient(180deg, hsl(var(--terracota) / 0.15) 0%, hsl(var(--ocean) / 0.1) 100%)",
+          }}
+        />
       </div>
 
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
