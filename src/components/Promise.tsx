@@ -3,7 +3,7 @@ import { Lock, Waves, Users } from "lucide-react";
 const pillars = [
   { icon: Lock, title: "Privacidade Total", text: "Acesso exclusivo. Sem vizinhos, sem compromissos." },
   { icon: Waves, title: "Vista 180° para o Mar", text: "Falésias, coqueiros e horizonte infinito." },
-  { icon: Users, title: "Para Grupos de Até 23", text: "Oito quartos. Estrutura completa para reunir os seus. Grupos maiores sob consulta." },
+  { icon: Users, title: "Para Grupos de Até 10", text: "Capacidade para até 10 hóspedes com conforto e privacidade total." },
 ];
 
 export const Promise = () => (
