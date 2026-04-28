@@ -39,7 +39,10 @@ export const Hero = () => {
       </div>
 
       <div className="relative h-full flex flex-col items-center justify-center text-center px-6">
-        <p className="anim-fade-up anim-d1 eyebrow eyebrow-light mb-8">
+        <p
+          className="anim-fade-up anim-d1 font-sans-soft text-xs md:text-sm tracking-[0.3em] uppercase text-off-white mb-8"
+          style={{ textShadow: "0 2px 12px hsl(var(--dark-text) / 0.6)" }}
+        >
           <span className="ornament" /> Morro Branco · Ceará <span className="ornament" />
         </p>
 
