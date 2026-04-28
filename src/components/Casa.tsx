@@ -1,6 +1,44 @@
-import veranda from "@/assets/gallery-veranda.jpg";
+import { useEffect, useState } from "react";
 import pool from "@/assets/gallery-pool.jpg";
 import aerial from "@/assets/gallery-aerial.jpg";
+import quarto1 from "@/assets/quarto-1.jpg";
+import quarto2 from "@/assets/quarto-2.jpg";
+import quarto3 from "@/assets/quarto-3.jpg";
+
+const quartoSlides = [quarto1, quarto2, quarto3];
+
+const QuartoSlideshow = () => {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((p) => (p + 1) % quartoSlides.length), 4500);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <div className="relative w-full aspect-[4/5] overflow-hidden shadow-[var(--shadow-elegant)]">
+      {quartoSlides.map((src, idx) => (
+        <img
+          key={src}
+          src={src}
+          alt="Quartos da Casa Robelú"
+          loading="lazy"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
+            idx === i ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+      <div className="absolute bottom-4 right-4 flex gap-1.5 z-10">
+        {quartoSlides.map((_, idx) => (
+          <span
+            key={idx}
+            className={`h-1 rounded-full transition-all duration-500 ${
+              idx === i ? "w-6 bg-off-white" : "w-1.5 bg-off-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const amenities = [
   "Piscina 4m × 8m (1,40m)",
