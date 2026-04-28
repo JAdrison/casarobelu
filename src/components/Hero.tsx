@@ -10,7 +10,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="top" className="relative min-h-[100svh] sm:min-h-[680px] w-full overflow-hidden">
+    <section id="top" className="relative min-h-[100svh] md:min-h-[820px] lg:min-h-[900px] w-full overflow-hidden">
       <div
         className="absolute inset-0 will-change-transform"
         style={{ transform: `translateY(${y}px) scale(1.08)` }}
@@ -38,7 +38,7 @@ export const Hero = () => {
         />
       </div>
 
-      <div className="relative min-h-[100svh] sm:min-h-[680px] flex flex-col items-center justify-center text-center px-5 sm:px-6 py-24">
+      <div className="relative min-h-[100svh] md:min-h-[820px] lg:min-h-[900px] flex flex-col items-center justify-center text-center px-5 sm:px-6 py-24">
         <p
           className="anim-fade-up anim-d1 font-sans-soft text-[10px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase text-off-white mb-6 sm:mb-8"
           style={{ textShadow: "0 2px 12px hsl(var(--dark-text) / 0.6)" }}
