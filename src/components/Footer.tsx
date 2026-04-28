@@ -37,8 +37,8 @@ export const Footer = () => (
         </p>
         <p className="flex md:justify-end items-center gap-3 text-off-white/75">
           <Mail className="w-4 h-4 text-gold" strokeWidth={1.3} />
-          <a href="mailto:faturamento@solldistribuidora.com" className="hover:text-off-white transition-colors">
-            faturamento@solldistribuidora.com
+          <a href="mailto:reservas@casarobelu.com.br" className="hover:text-off-white transition-colors">
+            reservas@casarobelu.com.br
           </a>
         </p>
       </div>
