@@ -212,3 +212,8 @@
     background: hsl(var(--off-white) / 0.18);
   }
 }
+
+/* ============ Promise: padding responsivo ============ */
+@media (min-width: 768px) {
+  section.relative.overflow-hidden > .promise-inner { /* fallback no-op */ }
+}
