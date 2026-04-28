@@ -4,8 +4,12 @@ export const Footer = () => (
   <footer className="bg-dark-text text-off-white/80 px-6 pt-20 pb-10">
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
       <div>
-        <a href="#top" className="font-display text-3xl text-off-white">
-          Casa <span className="italic">Robelú</span>
+        <a
+          href="#top"
+          style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
+          className="text-3xl uppercase tracking-[0.15em] text-off-white"
+        >
+          CASA ROBELÚ
         </a>
         <p className="font-serif-italic italic text-lg mt-5 max-w-sm text-off-white/60">
           Refúgio exclusivo nas falésias de Morro Branco.
