@@ -70,7 +70,12 @@ export const Casa = () => (
           </p>
         </div>
         <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
-          <QuartoSlideshow />
+          <img
+            src={pool}
+            alt="Piscina com vista para a falésia — Casa Robelú"
+            loading="lazy"
+            className="w-full aspect-[4/5] object-cover shadow-[var(--shadow-elegant)]"
+          />
           <div className="absolute -bottom-6 -left-6 hidden md:block w-32 h-32 border border-terracota/40" />
         </div>
       </div>
