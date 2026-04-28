@@ -27,9 +27,9 @@ export const Navbar = () => {
         <a
           href="#top"
           style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
-          className={`text-2xl tracking-wide ${scrolled ? "text-terracota" : "text-off-white"}`}
+          className={`text-2xl uppercase tracking-[0.15em] ${scrolled ? "text-terracota" : "text-off-white"}`}
         >
-          Casa Robelú
+          CASA ROBELÚ
         </a>
 
         <ul className="hidden md:flex items-center gap-10">
