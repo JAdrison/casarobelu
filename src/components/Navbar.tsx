@@ -48,10 +48,12 @@ export const Navbar = () => {
         </ul>
 
         <a
-          href="#reservas"
+          href="https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA."
+          target="_blank"
+          rel="noreferrer"
           className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 text-[12px] tracking-[0.2em] uppercase bg-terracota text-off-white hover:bg-terracota/90 transition-all shadow-[var(--shadow-elegant)]"
         >
-          Reservar
+          Reservar via WhatsApp
         </a>
 
         <button
