@@ -70,9 +70,7 @@ export const Casa = () => (
           </p>
         </div>
         <div className="reveal reveal-delay-1 casa-media">
-          <div className="casa-img p-0 overflow-hidden relative" style={{ height: undefined }}>
-            <QuartoSlideshow />
-          </div>
+          <QuartoSlideshow />
         </div>
       </div>
 
