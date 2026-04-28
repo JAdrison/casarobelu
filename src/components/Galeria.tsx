@@ -1,9 +1,9 @@
-import g1 from "@/assets/galeria-1.jpg";
-import g2 from "@/assets/galeria-2.jpg";
-import g3 from "@/assets/galeria-3.jpg";
-import g4 from "@/assets/galeria-4.jpg";
-import g5 from "@/assets/galeria-5.jpg";
-import g6 from "@/assets/galeria-6.jpg";
+import g1 from "@/assets/galeria-1.webp";
+import g2 from "@/assets/galeria-2.webp";
+import g3 from "@/assets/galeria-3.webp";
+import g4 from "@/assets/galeria-4.webp";
+import g5 from "@/assets/galeria-5.webp";
+import g6 from "@/assets/galeria-6.webp";
 
 type Tile = { src: string; alt: string; cls: string };
 

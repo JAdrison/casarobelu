@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import pool from "@/assets/lazer-piscina.jpg";
-import aerial from "@/assets/acesso-historia.jpg";
-import quarto1 from "@/assets/quarto-1.jpg";
-import quarto2 from "@/assets/quarto-2.jpg";
-import quarto3 from "@/assets/quarto-3.jpg";
+import pool from "@/assets/lazer-piscina.webp";
+import aerial from "@/assets/acesso-historia.webp";
+import quarto1 from "@/assets/quarto-1.webp";
+import quarto2 from "@/assets/quarto-2.webp";
+import quarto3 from "@/assets/quarto-3.webp";
 
 const quartoSlides = [quarto1, quarto2, quarto3];
 

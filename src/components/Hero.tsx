@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-casa-aerial.jpg";
+import heroImg from "@/assets/hero-casa-aerial.webp";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
