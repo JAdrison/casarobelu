@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Calendar, Wallet, Users, AlertCircle } from "lucide-react";
-import ctaBg from "@/assets/reservas-bg.jpg";
+import ctaBg from "@/assets/reservas-bg.webp";
 
 const WHATSAPP = "https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA.%20Pode%20me%20passar%20a%20disponibilidade%3F";
 
@@ -19,7 +19,7 @@ export const Reservas = () => {
   return (
     <section id="reservas" className="relative py-20 sm:py-28 md:py-40 px-5 sm:px-6 overflow-hidden">
       <div className="absolute inset-0">
-        <img src={ctaBg} alt="" className="w-full h-full object-cover" loading="lazy" />
+        <img src={ctaBg} alt="" className="w-full h-full object-cover" loading="lazy" decoding="async" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-dark)" }} />
         <div className="absolute inset-0 bg-dark-text/40" />
       </div>
