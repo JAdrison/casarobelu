@@ -3,23 +3,42 @@ import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const [y, setY] = useState(0);
+
   useEffect(() => {
-    const onScroll = () => setY(window.scrollY * 0.3);
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(max-width: 767px)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let raf = 0;
+    let pending = false;
+    const onScroll = () => {
+      if (pending) return;
+      pending = true;
+      raf = requestAnimationFrame(() => {
+        setY(window.scrollY * 0.3);
+        pending = false;
+      });
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (
     <section id="top" className="relative min-h-[100svh] md:min-h-[820px] lg:min-h-[900px] w-full overflow-hidden">
       <div
         className="absolute inset-0 will-change-transform"
-        style={{ transform: `translateY(${y}px) scale(1.08)` }}
+        style={{ transform: `translate3d(0, ${y}px, 0) scale(1.08)` }}
       >
         <img
           src={heroImg}
           alt="Falésias de Morro Branco ao pôr do sol — Casa Robelú"
           width={1920}
           height={1080}
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div
