@@ -14,7 +14,7 @@ export const Reservas = () => {
   };
 
   const hospedesNum = parseInt(form.hospedes, 10);
-  const grupoGrande = hospedesNum > 10;
+  const grupoGrande = hospedesNum > 23;
 
   return (
     <section id="reservas" className="relative py-20 sm:py-28 md:py-40 px-5 sm:px-6 overflow-hidden">
@@ -52,7 +52,7 @@ export const Reservas = () => {
           </div>
           <div className="flex items-start gap-3 text-off-white/85">
             <Users className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
-            <p className="text-sm leading-relaxed">Capacidade até 10 pessoas<br /><span className="text-off-white/60">Grupos maiores sob consulta</span></p>
+            <p className="text-sm leading-relaxed">Capacidade até 23 pessoas<br /><span className="text-off-white/60">Grupos maiores sob consulta</span></p>
           </div>
         </div>
 
@@ -87,17 +87,17 @@ export const Reservas = () => {
                 onChange={(e) => setForm({ ...form, hospedes: e.target.value })}
                 className="w-full bg-transparent border-b border-off-white/30 py-3 text-off-white focus:border-gold outline-none transition-colors"
               >
-                {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+                {Array.from({ length: 23 }, (_, i) => i + 1).map((n) => (
                   <option key={n} value={n} className="bg-dark-text">
                     {n} {n === 1 ? "pessoa" : "pessoas"}
                   </option>
                 ))}
-                <option value="11" className="bg-dark-text">Mais de 10 pessoas</option>
+                <option value="24" className="bg-dark-text">Mais de 23 pessoas</option>
               </select>
               {grupoGrande && (
                 <p className="mt-3 text-xs text-gold flex items-center gap-2">
                   <AlertCircle className="w-4 h-4" strokeWidth={1.4} />
-                  Para grupos acima de 10 pessoas, entre em contato pelo WhatsApp.
+                  Para grupos acima de 23 pessoas, entre em contato pelo WhatsApp.
                 </p>
               )}
             </div>
