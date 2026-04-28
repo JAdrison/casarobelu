@@ -23,11 +23,11 @@ export const Navbar = () => {
         scrolled ? "bg-off-white/95 backdrop-blur-md shadow-[0_1px_0_hsl(var(--border))]" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 h-16 sm:h-20 flex items-center justify-between">
         <a
           href="#top"
           style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
-          className={`text-2xl uppercase tracking-[0.15em] ${scrolled ? "text-terracota" : "text-off-white"}`}
+          className={`text-lg sm:text-2xl uppercase tracking-[0.12em] sm:tracking-[0.15em] ${scrolled ? "text-terracota" : "text-off-white"}`}
         >
           CASA ROBELÚ
         </a>

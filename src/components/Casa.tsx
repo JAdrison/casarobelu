@@ -52,17 +52,17 @@ const amenities = [
 ];
 
 export const Casa = () => (
-  <section id="casa" className="bg-champagne py-28 md:py-40 px-6">
-    <div className="max-w-7xl mx-auto space-y-32">
+  <section id="casa" className="bg-champagne py-20 sm:py-28 md:py-40 px-5 sm:px-6">
+    <div className="max-w-7xl mx-auto space-y-20 sm:space-y-28 md:space-y-32">
       {/* 3A */}
-      <div id="estrutura" className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <div id="estrutura" className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
         <div className="reveal order-2 md:order-1">
           <p className="eyebrow mb-6">A Casa</p>
-          <h2 className="font-display text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
             Oito quartos. <span className="italic">Uma experiência.</span>
           </h2>
-          <div className="w-16 h-px bg-terracota my-8" />
-          <p className="text-[17px] leading-[1.9] text-dark-text/75">
+          <div className="w-16 h-px bg-terracota my-6 sm:my-8" />
+          <p className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75">
             São 8 quartos cuidadosamente distribuídos — 2 suítes com ar-condicionado e
             cama casal, 3 suítes com ventilador, 1 quarto casal com ventilador, 1 quarto
             com 2 camas de solteiro e 1 quarto externo com 5 camas. Um espaço pensado
@@ -76,17 +76,17 @@ export const Casa = () => (
       </div>
 
       {/* 3B */}
-      <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
         <div className="reveal order-1">
           <img src={pool} alt="Piscina e deck com vista para o mar" loading="lazy" width={1280} height={1280}
             className="w-full aspect-square object-cover object-center shadow-[var(--shadow-elegant)]" />
         </div>
         <div className="reveal reveal-delay-1 order-2">
           <p className="eyebrow mb-6">Lazer & Conforto</p>
-          <h2 className="font-display text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
             Refúgio completo, <span className="italic">do deck ao mar.</span>
           </h2>
-          <div className="w-16 h-px bg-terracota my-8" />
+          <div className="w-16 h-px bg-terracota my-6 sm:my-8" />
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
             {amenities.map((a) => (
               <li key={a} className="flex items-start gap-3 text-dark-text/80 text-[15px]">
@@ -99,16 +99,16 @@ export const Casa = () => (
       </div>
 
       {/* 3C */}
-      <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
         <div className="reveal order-2 md:order-1">
           <p className="eyebrow mb-6">Acesso & História</p>
-          <h2 className="font-display text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
             Quarenta anos de história
             <br />
             <span className="italic">neste pedaço do Ceará.</span>
           </h2>
-          <div className="w-16 h-px bg-terracota my-8" />
-          <p className="text-[17px] leading-[1.9] text-dark-text/75">
+          <div className="w-16 h-px bg-terracota my-6 sm:my-8" />
+          <p className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75">
             O proprietário conhece cada maré, cada trilha, cada segredo de Morro Branco
             há quase 40 anos. O translado é seguro, orientado pelas marés e sem nenhuma
             dificuldade — você chega, desfruta e descansa.

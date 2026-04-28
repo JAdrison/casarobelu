@@ -17,7 +17,7 @@ export const Reservas = () => {
   const grupoGrande = hospedesNum > 10;
 
   return (
-    <section id="reservas" className="relative py-28 md:py-40 px-6 overflow-hidden">
+    <section id="reservas" className="relative py-20 sm:py-28 md:py-40 px-5 sm:px-6 overflow-hidden">
       <div className="absolute inset-0">
         <img src={ctaBg} alt="" className="w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-dark)" }} />
@@ -28,16 +28,16 @@ export const Reservas = () => {
         <p className="reveal eyebrow eyebrow-light mb-6">
           <span className="ornament" /> Reservas <span className="ornament" />
         </p>
-        <h2 className="reveal reveal-delay-1 font-display italic text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-balance">
+        <h2 className="reveal reveal-delay-1 font-display italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-balance">
           Seu próximo refúgio está
           <br />a uma reserva de distância.
         </h2>
-        <p className="reveal reveal-delay-2 mt-8 font-serif-italic text-xl text-off-white/80 max-w-2xl mx-auto">
+        <p className="reveal reveal-delay-2 mt-6 sm:mt-8 font-serif-italic text-base sm:text-xl text-off-white/80 max-w-2xl mx-auto">
           Disponibilidade limitada para feriados, Réveillon e alta temporada.
           Reserve com antecedência e garanta sua experiência.
         </p>
 
-        <div className="reveal reveal-delay-3 grid sm:grid-cols-3 gap-6 mt-14 max-w-4xl mx-auto text-left">
+        <div className="reveal reveal-delay-3 grid sm:grid-cols-3 gap-5 sm:gap-6 mt-10 sm:mt-14 max-w-4xl mx-auto text-left">
           <div className="flex items-start gap-3 text-off-white/85">
             <Calendar className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
             <p className="text-sm leading-relaxed">Check-in 9h · Check-out 16h</p>
@@ -57,7 +57,7 @@ export const Reservas = () => {
         </div>
 
         {/* Aviso destacado */}
-        <div className="reveal reveal-delay-4 mt-10 max-w-3xl mx-auto inline-flex items-center gap-3 px-6 py-4 border border-gold bg-gold/10 text-gold">
+        <div className="reveal reveal-delay-4 mt-8 sm:mt-10 max-w-3xl mx-auto flex items-center gap-3 px-5 sm:px-6 py-4 border border-gold bg-gold/10 text-gold">
           <AlertCircle className="w-5 h-5 shrink-0" strokeWidth={1.4} />
           <p className="text-sm tracking-wide text-left">
             Não realizamos reservas de apenas 1 diária. <strong className="font-semibold">Estadia mínima: 2 noites.</strong>
@@ -66,7 +66,7 @@ export const Reservas = () => {
 
         <form
           onSubmit={onSubmit}
-          className="reveal reveal-delay-4 mt-10 max-w-3xl mx-auto bg-off-white/5 backdrop-blur-md border border-off-white/20 p-8 md:p-10 text-left"
+          className="reveal reveal-delay-4 mt-8 sm:mt-10 max-w-3xl mx-auto bg-off-white/5 backdrop-blur-md border border-off-white/20 p-6 sm:p-8 md:p-10 text-left"
         >
           <div className="grid sm:grid-cols-2 gap-5">
             <Field label="Nome completo" value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} required maxLength={100} />
@@ -103,7 +103,7 @@ export const Reservas = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn-ghost-light mt-10 w-full sm:w-auto justify-center">
+          <button type="submit" className="btn-ghost-light mt-8 sm:mt-10 w-full sm:w-auto justify-center">
             Verificar Disponibilidade <span aria-hidden>→</span>
           </button>
         </form>
