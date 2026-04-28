@@ -1,17 +1,17 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
 
 export const Footer = () => (
-  <footer className="bg-dark-text text-off-white/80 px-6 pt-20 pb-10">
-    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14">
+  <footer className="bg-dark-text text-off-white/80 px-5 sm:px-6 pt-16 sm:pt-20 pb-10">
+    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 sm:gap-14">
       <div>
         <a
           href="#top"
           style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
-          className="text-3xl uppercase tracking-[0.15em] text-off-white"
+          className="text-2xl sm:text-3xl uppercase tracking-[0.12em] sm:tracking-[0.15em] text-off-white"
         >
           CASA ROBELÚ
         </a>
-        <p className="font-serif-italic italic text-lg mt-5 max-w-sm text-off-white/60">
+        <p className="font-serif-italic italic text-base sm:text-lg mt-5 max-w-sm text-off-white/60">
           Refúgio exclusivo nas falésias de Morro Branco.
         </p>
         <a
@@ -44,7 +44,7 @@ export const Footer = () => (
       </div>
     </div>
 
-    <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-off-white/10 flex flex-col md:flex-row justify-between gap-4 text-xs tracking-[0.2em] uppercase text-off-white/40">
+    <div className="max-w-7xl mx-auto mt-12 sm:mt-16 pt-8 border-t border-off-white/10 flex flex-col md:flex-row justify-between gap-3 sm:gap-4 text-[10px] sm:text-xs tracking-[0.18em] sm:tracking-[0.2em] uppercase text-off-white/40">
       <p>© 2026 Casa Robelú — Todos os direitos reservados.</p>
       <p>Morro Branco · Beberibe · Ceará · Brasil</p>
     </div>

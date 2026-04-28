@@ -52,11 +52,11 @@ const tiles: Tile[] = [
 ];
 
 export const Galeria = () => (
-  <section className="bg-off-white py-28 md:py-40 px-6">
+  <section className="bg-off-white py-20 sm:py-28 md:py-40 px-5 sm:px-6">
     <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-16 md:mb-20">
+      <div className="text-center mb-12 sm:mb-16 md:mb-20">
         <p className="reveal eyebrow mb-6">Galeria</p>
-        <h2 className="reveal reveal-delay-1 font-display text-4xl md:text-6xl text-dark-text leading-[1.1] text-balance">
+        <h2 className="reveal reveal-delay-1 font-display text-3xl sm:text-4xl md:text-6xl text-dark-text leading-[1.1] text-balance">
           Cada ângulo é uma tela.
           <br />
           <span className="italic">Cada momento, uma lembrança.</span>
@@ -67,8 +67,10 @@ export const Galeria = () => (
         className="
           reveal
           grid
-          grid-cols-2 gap-1
-          md:grid-cols-4 md:grid-rows-[280px_280px_360px] md:gap-2
+          grid-cols-2 auto-rows-[140px] gap-1
+          sm:auto-rows-[200px] sm:gap-1.5
+          md:grid-cols-4 md:grid-rows-[220px_220px_300px] md:gap-2
+          lg:grid-rows-[280px_280px_360px]
         "
       >
         {tiles.map((t, i) => (

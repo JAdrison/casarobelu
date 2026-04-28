@@ -6,11 +6,11 @@ const stats = [
 ];
 
 export const Stats = () => (
-  <section className="bg-terracota text-off-white py-24 md:py-32 px-6">
-    <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-14 gap-x-8 text-center">
+  <section className="bg-terracota text-off-white py-16 sm:py-24 md:py-32 px-5 sm:px-6">
+    <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-10 sm:gap-y-14 gap-x-6 sm:gap-x-8 text-center">
       {stats.map((s, i) => (
         <div key={s.label} className={`reveal reveal-delay-${i + 1}`}>
-          <p className="font-display text-5xl md:text-7xl leading-none">
+          <p className="font-display text-4xl sm:text-5xl md:text-7xl leading-none">
             {s.n}
             <span className="text-gold">{s.suf}</span>
           </p>
