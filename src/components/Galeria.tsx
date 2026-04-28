@@ -81,7 +81,8 @@ export const Galeria = () => (
             <img
               src={t.src}
               alt={t.alt}
-              loading={i < 2 ? "eager" : "lazy"}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-dark-text/0 group-hover:bg-dark-text/30 transition-colors duration-300" />

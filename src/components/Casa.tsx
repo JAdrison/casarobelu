@@ -74,6 +74,7 @@ export const Casa = () => (
             src={pool}
             alt="Piscina com vista para a falésia — Casa Robelú"
             loading="lazy"
+            decoding="async"
             className="w-full aspect-[4/5] object-cover shadow-[var(--shadow-elegant)]"
           />
           <div className="absolute -bottom-6 -left-6 hidden md:block w-32 h-32 border border-terracota/40" />
@@ -83,7 +84,7 @@ export const Casa = () => (
       {/* 3B */}
       <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
         <div className="reveal order-1">
-          <img src={pool} alt="Piscina e deck com vista para o mar" loading="lazy" width={1280} height={1280}
+          <img src={pool} alt="Piscina e deck com vista para o mar" loading="lazy" decoding="async" width={1280} height={1280}
             className="w-full aspect-square object-cover object-center shadow-[var(--shadow-elegant)]" />
         </div>
         <div className="reveal reveal-delay-1 order-2">
@@ -120,7 +121,7 @@ export const Casa = () => (
           </p>
         </div>
         <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
-          <img src={aerial} alt="Vista aérea da Casa Robelú nas falésias" loading="lazy" width={1600} height={1024}
+          <img src={aerial} alt="Vista aérea da Casa Robelú nas falésias" loading="lazy" decoding="async" width={1600} height={1024}
             className="w-full aspect-[5/4] object-cover shadow-[var(--shadow-elegant)]" />
           <div className="absolute -top-6 -right-6 hidden md:block w-32 h-32 border border-terracota/40" />
         </div>

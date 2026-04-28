@@ -19,7 +19,7 @@ export const Reservas = () => {
   return (
     <section id="reservas" className="relative py-20 sm:py-28 md:py-40 px-5 sm:px-6 overflow-hidden">
       <div className="absolute inset-0">
-        <img src={ctaBg} alt="" className="w-full h-full object-cover" loading="lazy" />
+        <img src={ctaBg} alt="" className="w-full h-full object-cover" loading="lazy" decoding="async" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-dark)" }} />
         <div className="absolute inset-0 bg-dark-text/40" />
       </div>
