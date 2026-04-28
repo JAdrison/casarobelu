@@ -55,8 +55,8 @@ export const Casa = () => (
   <section id="casa" className="bg-champagne py-20 sm:py-28 md:py-40 px-5 sm:px-6">
     <div className="max-w-7xl mx-auto space-y-20 sm:space-y-28 md:space-y-32">
       {/* 3A */}
-      <div id="estrutura" className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
-        <div className="reveal order-2 md:order-1">
+      <div id="estrutura" className="casa-block">
+        <div className="reveal casa-text">
           <p className="eyebrow mb-6">A Casa</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
             Oito quartos. <span className="italic">Uma experiência.</span>
@@ -69,25 +69,29 @@ export const Casa = () => (
             para reunir família e amigos sem concessões de conforto.
           </p>
         </div>
-        <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
+        <div className="reveal reveal-delay-1 casa-media">
           <img
             src={pool}
             alt="Piscina com vista para a falésia — Casa Robelú"
             loading="lazy"
             decoding="async"
-            className="w-full aspect-[4/5] object-cover shadow-[var(--shadow-elegant)]"
+            className="casa-img"
           />
-          <div className="absolute -bottom-6 -left-6 hidden md:block w-32 h-32 border border-terracota/40" />
         </div>
       </div>
 
       {/* 3B */}
-      <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
-        <div className="reveal order-1">
-          <img src={pool} alt="Piscina e deck com vista para o mar" loading="lazy" decoding="async" width={1280} height={1280}
-            className="w-full aspect-square object-cover object-center shadow-[var(--shadow-elegant)]" />
+      <div className="casa-block casa-block--reverse">
+        <div className="reveal casa-media">
+          <img
+            src={pool}
+            alt="Piscina e deck com vista para o mar"
+            loading="lazy"
+            decoding="async"
+            className="casa-img"
+          />
         </div>
-        <div className="reveal reveal-delay-1 order-2">
+        <div className="reveal reveal-delay-1 casa-text">
           <p className="eyebrow mb-6">Lazer & Conforto</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
             Refúgio completo, <span className="italic">do deck ao mar.</span>
@@ -105,8 +109,8 @@ export const Casa = () => (
       </div>
 
       {/* 3C */}
-      <div className="grid md:grid-cols-2 gap-10 md:gap-24 items-center">
-        <div className="reveal order-2 md:order-1">
+      <div className="casa-block">
+        <div className="reveal casa-text">
           <p className="eyebrow mb-6">Acesso & História</p>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance">
             Quarenta anos de história
@@ -120,10 +124,14 @@ export const Casa = () => (
             dificuldade — você chega, desfruta e descansa.
           </p>
         </div>
-        <div className="reveal reveal-delay-1 order-1 md:order-2 relative">
-          <img src={aerial} alt="Vista aérea da Casa Robelú nas falésias" loading="lazy" decoding="async" width={1600} height={1024}
-            className="w-full aspect-[5/4] object-cover shadow-[var(--shadow-elegant)]" />
-          <div className="absolute -top-6 -right-6 hidden md:block w-32 h-32 border border-terracota/40" />
+        <div className="reveal reveal-delay-1 casa-media">
+          <img
+            src={aerial}
+            alt="Vista aérea da Casa Robelú nas falésias"
+            loading="lazy"
+            decoding="async"
+            className="casa-img"
+          />
         </div>
       </div>
     </div>
