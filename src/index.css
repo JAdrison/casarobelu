@@ -214,6 +214,7 @@
 }
 
 /* ============ Promise: padding responsivo ============ */
+.promise-section { padding: 72px 20px; }
 @media (min-width: 768px) {
-  section.relative.overflow-hidden > .promise-inner { /* fallback no-op */ }
+  .promise-section { padding: 100px 24px; }
 }
