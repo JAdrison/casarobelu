@@ -63,27 +63,15 @@ export const Galeria = () => (
         </h2>
       </div>
 
-      <div
-        className="
-          reveal
-          grid
-          grid-cols-2 auto-rows-[140px] gap-1
-          sm:auto-rows-[200px] sm:gap-1.5
-          md:grid-cols-4 md:grid-rows-[220px_220px_300px] md:gap-2
-          lg:grid-rows-[280px_280px_360px]
-        "
-      >
+      <div className="reveal galeria-uniform">
         {tiles.map((t, i) => (
-          <figure
-            key={i}
-            className={`relative overflow-hidden group ${t.cls}`}
-          >
+          <figure key={i} className="relative overflow-hidden group">
             <img
               src={t.src}
               alt={t.alt}
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+              className="transition-transform duration-[1400ms] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-dark-text/0 group-hover:bg-dark-text/30 transition-colors duration-300" />
           </figure>
