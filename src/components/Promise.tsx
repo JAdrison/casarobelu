@@ -9,11 +9,8 @@ const pillars = [
 
 export const Promise = () => (
   <section
-    className="relative overflow-hidden"
-    style={{
-      background: "#F5F0E8",
-      padding: "72px 20px",
-    }}
+    className="promise-section relative overflow-hidden"
+    style={{ background: "#F5F0E8" }}
   >
     {/* Foto de fundo em baixíssima opacidade */}
     <div
