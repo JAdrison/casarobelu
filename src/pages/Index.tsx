@@ -5,6 +5,7 @@ import { Promise } from "@/components/Promise";
 import { Casa } from "@/components/Casa";
 import { Experiencias } from "@/components/Experiencias";
 import { Galeria } from "@/components/Galeria";
+import { Depoimentos } from "@/components/Depoimentos";
 
 import { Stats } from "@/components/Stats";
 import { Reservas } from "@/components/Reservas";
@@ -32,6 +33,7 @@ const Index = () => {
       <Casa />
       <Experiencias />
       <Galeria />
+      <Depoimentos />
       
       <Stats />
       <Reservas />

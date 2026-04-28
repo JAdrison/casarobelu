@@ -1,16 +1,16 @@
 const items = [
   {
-    text: "A vista para as falésias ao amanhecer foi de tirar o fôlego. Reunimos 18 pessoas e todos saíram querendo voltar no mês seguinte.",
+    text: "A vista para as falésias ao amanhecer foi inesquecível. Reunimos a família inteira e todos querem voltar.",
     name: "Família Albuquerque",
     city: "Fortaleza",
   },
   {
-    text: "Uma casa que entrega exatamente o que promete: privacidade, conforto e uma vista que você não esquece. Voltamos no Réveillon.",
+    text: "Privacidade, conforto e uma vista que você não encontra em hotel nenhum. Voltamos no Réveillon.",
     name: "Grupo de amigos",
     city: "Fortaleza",
   },
   {
-    text: "Do café da manhã na varanda ao último mergulho na piscina — tudo perfeito. A Casa Robelú é nosso refúgio favorito no Ceará.",
+    text: "Do café da manhã na varanda ao último mergulho na piscina — tudo impecável. Nosso refúgio favorito no Ceará.",
     name: "Família Carneiro",
     city: "Fortaleza",
   },
