@@ -1,20 +1,26 @@
 import parapente from "@/assets/parapente.webp";
+import bgFalesias from "@/assets/exp-falesias.jpg";
+import bgBuggy from "@/assets/exp-buggy.jpg";
+import bgSabores from "@/assets/exp-sabores.jpg";
 
 const cards = [
   {
     label: "Natureza",
     title: "As Falésias de Morro Branco",
     text: "Formações geológicas únicas, cores que vão do branco ao terracota, mares revoltos e piscinas naturais. O cartão-postal do Ceará a poucos passos da casa.",
+    bg: bgFalesias,
   },
   {
     label: "Aventura",
     title: "Buggy & Quadriciclo",
     text: "Percorra as dunas e praias desertas da região com a adrenalina dos buggys — o modo mais autêntico de descobrir a costa cearense.",
+    bg: bgBuggy,
   },
   {
     label: "Gastronomia",
     title: "Sabores do Nordeste",
     text: "Frutos do mar frescos, culinária local e drinks ao pôr do sol no deck com churrasqueira. Cada refeição aqui é parte da experiência.",
+    bg: bgSabores,
   },
 ];
 
@@ -37,12 +43,25 @@ export const Experiencias = () => (
         {cards.map((c, i) => (
           <article
             key={c.title}
-            className={`reveal reveal-delay-${i + 1} group p-7 sm:p-10 border border-off-white/15 bg-off-white/[0.02] hover:bg-off-white/[0.05] hover:border-gold/40 transition-all duration-700`}
+            className={`reveal reveal-delay-${i + 1} group relative overflow-hidden p-7 sm:p-10 border border-off-white/15 hover:border-gold/40 transition-all duration-700 min-h-[420px] flex flex-col justify-end`}
           >
-            <p className="eyebrow eyebrow-light">{c.label}</p>
-            <h3 className="font-display italic text-2xl sm:text-3xl mt-5 sm:mt-6 text-off-white">{c.title}</h3>
-            <div className="w-10 h-px bg-gold my-5 sm:my-6 transition-all duration-500 group-hover:w-20" />
-            <p className="font-serif-italic text-base sm:text-lg text-off-white/70 leading-relaxed">{c.text}</p>
+            {/* Background image */}
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+              style={{ backgroundImage: `url(${c.bg})` }}
+            />
+            {/* Dark gradient for legibility */}
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-t from-dark-text via-dark-text/75 to-dark-text/20 group-hover:from-dark-text group-hover:via-dark-text/65 transition-colors duration-700"
+            />
+            <div className="relative">
+              <p className="eyebrow eyebrow-light">{c.label}</p>
+              <h3 className="font-display italic text-2xl sm:text-3xl mt-5 sm:mt-6 text-off-white">{c.title}</h3>
+              <div className="w-10 h-px bg-gold my-5 sm:my-6 transition-all duration-500 group-hover:w-20" />
+              <p className="font-serif-italic text-base sm:text-lg text-off-white/85 leading-relaxed">{c.text}</p>
+            </div>
           </article>
         ))}
       </div>
