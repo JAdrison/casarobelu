@@ -1,0 +1,81 @@
+import { motion } from "framer-motion";
+import peNaAreia from "@/assets/externa-pe-na-areia.webp";
+import deckMar from "@/assets/externa-deck-mar.webp";
+import { PhotoStack } from "./PhotoStack";
+import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
+
+const RomanNumeral = ({ n }: { n: string }) => (
+  <span
+    aria-hidden
+    className="font-display italic absolute -top-6 -left-2 select-none pointer-events-none"
+    style={{ fontSize: "5rem", color: "rgba(160,82,45,0.13)", lineHeight: 1 }}
+  >
+    {n}
+  </span>
+);
+
+export const PeNaAreia = () => (
+  <section id="casa" className="bg-champagne py-20 sm:py-28 md:py-36 px-5 sm:px-6 relative overflow-hidden">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={fadeUp}
+        className="order-2 md:order-1"
+      >
+        <PhotoStack
+          imageBack={peNaAreia}
+          imageFront={deckMar}
+          altBack="Passarela com vista para o mar e coqueiros"
+          altFront="Deck com piscina e vista 180°"
+        />
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={stagger(0.05, 0.1)}
+        className="order-1 md:order-2 relative"
+      >
+        <RomanNumeral n="I" />
+        <motion.p variants={fadeUp} className="eyebrow mb-6 relative">
+          A Localização
+        </motion.p>
+        <motion.h2
+          variants={fadeUp}
+          className="font-display text-3xl sm:text-4xl md:text-5xl text-dark-text leading-[1.1] text-balance"
+          style={{ fontWeight: 400, letterSpacing: "-0.01em" }}
+        >
+          Pé na areia. Vista 180°.
+          <br />
+          <span className="italic" style={{ color: "#A0522D" }}>Privacidade absoluta.</span>
+        </motion.h2>
+        <motion.div
+          variants={{
+            hidden: { scaleX: 0 },
+            show: { scaleX: 1, transition: { duration: 0.9, ease: easeLuxe } },
+          }}
+          className="w-16 h-px bg-terracota my-6 sm:my-8 origin-left"
+        />
+        <motion.p
+          variants={fadeUp}
+          className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75"
+        >
+          Você acorda com o som do mar e abre os olhos para o horizonte. A passarela
+          leva direto à praia — sem ruas para atravessar, sem turistas no caminho.
+          Aqui o dia começa onde a maioria das férias termina.
+        </motion.p>
+        <motion.a
+          variants={fadeUp}
+          href="#galeria"
+          className="inline-flex items-center gap-2 mt-8 text-[12px] uppercase tracking-[0.2em] text-terracota hover:text-gold transition-colors"
+          style={{ fontFamily: "'Quicksand', sans-serif", borderBottom: "1px solid currentColor", paddingBottom: 4 }}
+        >
+          Ver Galeria <span aria-hidden>→</span>
+        </motion.a>
+      </motion.div>
+    </div>
+  </section>
+);
