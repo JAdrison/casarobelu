@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const links = [
   { href: "#casa", label: "A Casa" },
@@ -10,6 +11,9 @@ const links = [
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.4 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -23,25 +27,40 @@ export const Navbar = () => {
         scrolled ? "bg-off-white/95 backdrop-blur-md shadow-[0_1px_0_hsl(var(--border))]" : "bg-transparent"
       }`}
     >
+      {/* Scroll progress bar */}
+      <motion.div
+        aria-hidden
+        className="absolute top-0 left-0 right-0 h-[2px] origin-left"
+        style={{ background: "linear-gradient(90deg, #A0522D, #C4915A)", scaleX: progress }}
+      />
+
       <nav className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 h-16 sm:h-20 flex items-center justify-between">
-        <a
+        <motion.a
           href="#top"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
           className={`text-lg sm:text-2xl uppercase tracking-[0.12em] sm:tracking-[0.15em] ${scrolled ? "text-terracota" : "text-off-white"}`}
         >
           CASA ROBELÚ
-        </a>
+        </motion.a>
 
         <ul className="hidden md:flex items-center gap-10">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`font-sans-soft text-[13px] tracking-[0.2em] uppercase transition-colors ${
+                className={`relative font-sans-soft text-[13px] tracking-[0.2em] uppercase transition-colors group ${
                   scrolled ? "text-dark-text hover:text-terracota" : "text-off-white/85 hover:text-off-white"
                 }`}
               >
                 {l.label}
+                <span
+                  aria-hidden
+                  className="absolute left-0 right-0 -bottom-1 h-px scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"
+                  style={{ background: "#C4915A" }}
+                />
               </a>
             </li>
           ))}
@@ -68,7 +87,12 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div className="md:hidden bg-off-white border-t border-border">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="md:hidden bg-off-white border-t border-border"
+        >
           <ul className="px-8 py-8 space-y-5">
             {links.map((l) => (
               <li key={l.href}>
@@ -87,7 +111,7 @@ export const Navbar = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
       )}
     </header>
   );
