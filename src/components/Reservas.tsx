@@ -14,7 +14,7 @@ export const Reservas = () => {
   };
 
   const hospedesNum = parseInt(form.hospedes, 10);
-  const grupoGrande = hospedesNum > 10;
+  const grupoGrande = hospedesNum > 23;
 
   return (
     <section id="reservas" className="relative py-20 sm:py-28 md:py-40 px-5 sm:px-6 overflow-hidden">
@@ -87,12 +87,12 @@ export const Reservas = () => {
                 onChange={(e) => setForm({ ...form, hospedes: e.target.value })}
                 className="w-full bg-transparent border-b border-off-white/30 py-3 text-off-white focus:border-gold outline-none transition-colors"
               >
-                {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+                {Array.from({ length: 23 }, (_, i) => i + 1).map((n) => (
                   <option key={n} value={n} className="bg-dark-text">
                     {n} {n === 1 ? "pessoa" : "pessoas"}
                   </option>
                 ))}
-                <option value="11" className="bg-dark-text">Mais de 23 pessoas</option>
+                <option value="24" className="bg-dark-text">Mais de 23 pessoas</option>
               </select>
               {grupoGrande && (
                 <p className="mt-3 text-xs text-gold flex items-center gap-2">

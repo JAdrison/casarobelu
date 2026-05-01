@@ -146,8 +146,8 @@ export const Hero = () => {
               show: { opacity: 1, y: 0, transition: { duration: 1, ease: easeLuxe } },
             }}
           >
-            Um refúgio exclusivo em Morro Branco para quem escolhe momentos
-            inesquecíveis acima de qualquer coisa.
+            Pé na areia, vista 180° e estrutura completa para até 23 pessoas.
+            Um refúgio em Morro Branco para quem não aceita o comum.
           </motion.p>
 
           <motion.div
