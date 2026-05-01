@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-casa-aerial.webp";
+import heroImg from "@/assets/aerea-falesia.webp";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { easeLuxe, stagger, wordReveal } from "@/lib/motion";

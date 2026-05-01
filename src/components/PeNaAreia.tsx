@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import peNaAreia from "@/assets/externa-pe-na-areia.webp";
-import deckMar from "@/assets/externa-deck-mar.webp";
+import gramadoMar from "@/assets/gramado-mar.webp";
+import virgemMar from "@/assets/virgem-mar.webp";
 import { PhotoStack } from "./PhotoStack";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
@@ -25,10 +25,10 @@ export const PeNaAreia = () => (
         className="order-2 md:order-1"
       >
         <PhotoStack
-          imageBack={peNaAreia}
-          imageFront={deckMar}
-          altBack="Passarela com vista para o mar e coqueiros"
-          altFront="Deck com piscina e vista 180°"
+          imageBack={gramadoMar}
+          imageFront={virgemMar}
+          altBack="Gramado com coqueiros e horizonte do mar"
+          altFront="Imagem da Virgem na ponta da falésia com vista para o mar"
         />
       </motion.div>
 

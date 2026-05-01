@@ -1,3 +1,5 @@
+import parapente from "@/assets/parapente.webp";
+
 const cards = [
   {
     label: "Natureza",
@@ -43,6 +45,42 @@ export const Experiencias = () => (
             <p className="font-serif-italic text-base sm:text-lg text-off-white/70 leading-relaxed">{c.text}</p>
           </article>
         ))}
+      </div>
+
+      {/* Highlight: Paragliding */}
+      <div className="mt-16 sm:mt-24 grid md:grid-cols-2 gap-8 md:gap-14 items-center">
+        <figure className="reveal relative overflow-hidden" style={{ borderRadius: 2, boxShadow: "0 30px 60px -20px rgba(0,0,0,0.6)" }}>
+          <img
+            src={parapente}
+            alt="Parapente sobrevoando as falésias e o mar"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
+            style={{ aspectRatio: "4/5" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark-text/60 via-transparent to-transparent" />
+        </figure>
+        <div className="reveal reveal-delay-1">
+          <p className="eyebrow eyebrow-light mb-5">Em destaque</p>
+          <h3 className="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.1] text-off-white text-balance" style={{ fontWeight: 400 }}>
+            Voe sobre as falésias.
+            <br />
+            <span className="italic text-gold">Uma vista que não cabe em fotos.</span>
+          </h3>
+          <div className="w-16 h-px bg-gold my-6 sm:my-8" />
+          <p className="font-serif-italic text-base sm:text-lg text-off-white/75 leading-relaxed max-w-xl">
+            A poucos minutos da casa, em Canoa Quebrada, você decola de parapente e
+            vê de cima o que torna esse pedaço do Ceará único: as cores das falésias,
+            o azul do mar e a praia desenhando o horizonte.
+          </p>
+          <a
+            href="#reservas"
+            className="inline-flex items-center gap-2 mt-8 text-[12px] uppercase tracking-[0.2em] text-gold hover:text-off-white transition-colors"
+            style={{ fontFamily: "'Quicksand', sans-serif", borderBottom: "1px solid currentColor", paddingBottom: 4 }}
+          >
+            Reservar a estadia <span aria-hidden>→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

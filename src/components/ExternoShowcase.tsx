@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import deckMar from "@/assets/externa-deck-mar.webp";
-import peNaAreia from "@/assets/externa-pe-na-areia.webp";
-import redes from "@/assets/externa-redes.webp";
+import espreguicadeiras from "@/assets/espreguicadeiras-mar.webp";
+import piscinaPergolado from "@/assets/piscina-pergolado.webp";
+import quadraVolei from "@/assets/quadra-volei.webp";
 import { stagger, fadeUp, viewportOnce } from "@/lib/motion";
 
 const items = [
   {
-    src: peNaAreia,
+    src: espreguicadeiras,
     label: "Pé na Areia",
-    desc: "Acesso direto à praia em poucos passos — sem ruas, sem desvios.",
+    desc: "Acordar com o som do mar e descer pela passarela direto na praia.",
   },
   {
-    src: deckMar,
-    label: "Deck com Vista 180°",
-    desc: "Piscina, mesas e o mar como cenário do amanhecer ao pôr do sol.",
+    src: piscinaPergolado,
+    label: "Piscina com Vista",
+    desc: "4×8m sob pergolado de madeira, com o mar emoldurando cada mergulho.",
   },
   {
-    src: redes,
-    label: "Varanda das Redes",
-    desc: "Espaço de descanso à sombra, com brisa do mar o dia inteiro.",
+    src: quadraVolei,
+    label: "Quadra & Lazer",
+    desc: "Vôlei, capela e piscina lado a lado — partidas até o pôr do sol.",
   },
 ];
 

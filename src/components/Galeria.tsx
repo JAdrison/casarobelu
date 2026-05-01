@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
-import g1 from "@/assets/galeria-1.webp";
-import g2 from "@/assets/galeria-2.webp";
-import g3 from "@/assets/galeria-3.webp";
-import g4 from "@/assets/galeria-4.webp";
-import g5 from "@/assets/galeria-5.webp";
-import g6 from "@/assets/galeria-6.webp";
+import aerea from "@/assets/aerea-falesia.webp";
+import piscinaPergolado from "@/assets/piscina-pergolado.webp";
+import quadraVolei from "@/assets/quadra-volei.webp";
+import espreguicadeiras from "@/assets/espreguicadeiras-mar.webp";
+import virgemMar from "@/assets/virgem-mar.webp";
+import parapente from "@/assets/parapente.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const tiles = [
-  { src: g3, alt: "Vista panorâmica com coqueiros e mar", label: "Panorâmica" },
-  { src: g1, alt: "Falésia, casa e piscina", label: "Falésia" },
-  { src: g6, alt: "Capelinha com falésia ao fundo", label: "Capela" },
-  { src: g5, alt: "Área gourmet com churrasqueira", label: "Gourmet" },
-  { src: g4, alt: "Deck com mesa e vista para o mar", label: "Deck" },
-  { src: g2, alt: "Passarela com coqueiros e vista para o mar", label: "Coqueiros" },
+  { src: aerea, alt: "Vista aérea da casa, falésia e piscina", label: "Aérea" },
+  { src: piscinaPergolado, alt: "Piscina sob pergolado com vista para o mar", label: "Piscina" },
+  { src: quadraVolei, alt: "Quadra de vôlei e capela ao lado da piscina", label: "Quadra" },
+  { src: espreguicadeiras, alt: "Espreguiçadeiras de frente para o mar", label: "Solário" },
+  { src: virgemMar, alt: "Imagem da Virgem na ponta da falésia", label: "Mirante" },
+  { src: parapente, alt: "Parapente sobrevoando a praia", label: "Parapente" },
 ];
 
 export const Galeria = () => (
