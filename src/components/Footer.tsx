@@ -1,15 +1,12 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
+import logoRobelu from "@/assets/logo-robelu-transparent.png";
 
 export const Footer = () => (
   <footer className="bg-dark-text text-off-white/80 px-5 sm:px-6 pt-16 sm:pt-20 pb-10">
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 sm:gap-14">
       <div>
-        <a
-          href="#top"
-          style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
-          className="text-2xl sm:text-3xl uppercase tracking-[0.12em] sm:tracking-[0.15em] text-off-white"
-        >
-          CASA ROBELÚ
+        <a href="#top" className="inline-block" aria-label="Casa Robelú — topo">
+          <img src={logoRobelu} alt="Casa Robelú" className="h-20 sm:h-24 w-auto brightness-0 invert" />
         </a>
         <p className="font-serif-italic italic text-lg sm:text-xl mt-5 max-w-sm text-off-white/80">
           Refúgio exclusivo nas falésias de Morro Branco.
