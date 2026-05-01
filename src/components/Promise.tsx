@@ -6,7 +6,7 @@ import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 const pillars = [
   { icon: Lock, title: "Privacidade Total", text: "Acesso exclusivo. Sem vizinhos, sem compromissos." },
   { icon: Waves, title: "Vista 180° para o Mar", text: "Falésias, coqueiros e horizonte infinito." },
-  { icon: Users, title: "Para Grupos de Até 10", text: "Capacidade para até 10 hóspedes com conforto." },
+  { icon: Users, title: "Para Grupos de Até 23", text: "Capacidade para até 23 hóspedes com conforto e estrutura completa." },
 ];
 
 export const Promise = () => (
@@ -103,8 +103,8 @@ export const Promise = () => (
         }}
       >
         A Casa Robelú nasceu para grupos que recusam o comum. Vista privilegiada
-        de 180° para o mar, falésias em tons de terracota e estrutura completa
-        para até 10 pessoas — cada estadia se torna uma memória que não se esquece.
+        de 180° para o mar, pé na areia, falésias em tons de terracota e estrutura
+        completa para até 23 pessoas — cada estadia, uma memória que não se esquece.
       </motion.p>
 
       <motion.p

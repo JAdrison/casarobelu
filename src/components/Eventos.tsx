@@ -78,7 +78,7 @@ export const Eventos = () => (
           className="font-serif-italic italic mt-6"
           style={{ maxWidth: 520, fontSize: "1.15rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.7 }}
         >
-          Reúna até 10 pessoas em um refúgio nas falésias para celebrar o que importa
+          Reúna até 23 pessoas em um refúgio nas falésias para celebrar o que importa
           — com privacidade, beleza e atendimento sob medida.
         </motion.p>
 
