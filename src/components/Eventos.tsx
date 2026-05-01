@@ -1,59 +1,177 @@
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
 import bg from "@/assets/cta-night.webp";
+import veranda from "@/assets/gallery-veranda.webp";
+import bgFalesias from "@/assets/gallery-cliffs.webp";
+import { fadeUp, stagger, maskReveal, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const WHATSAPP =
   "https://wa.me/5585997640313?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20evento%20na%20Casa%20Robel%C3%BA.";
 
+const bullets = [
+  "Aniversários e confraternizações",
+  "Casamentos íntimos com vista para o mar",
+  "Retiros corporativos com privacidade total",
+  "Equipe de apoio e parceiros locais sob demanda",
+];
+
 export const Eventos = () => (
-  <section className="relative py-24 sm:py-32 md:py-40 px-5 sm:px-6 overflow-hidden">
-    <div className="absolute inset-0">
-      <img src={bg} alt="" className="w-full h-full object-cover" loading="lazy" decoding="async" />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.8) 100%)",
-        }}
-      />
-    </div>
+  <section
+    id="eventos"
+    className="relative overflow-hidden py-20 sm:py-28 md:py-36 px-5 sm:px-6"
+    style={{ background: "#A0522D" }}
+  >
+    {/* Decorative background image */}
+    <div
+      aria-hidden
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        backgroundImage: `url(${bgFalesias})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center right",
+        opacity: 0.1,
+        mixBlendMode: "overlay",
+      }}
+    />
+    {/* Soft texture */}
+    <div
+      aria-hidden
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        background:
+          "radial-gradient(ellipse at top left, rgba(196,145,90,0.18) 0%, transparent 60%)",
+      }}
+    />
 
-    <div className="relative max-w-3xl mx-auto text-center text-off-white">
-      <p className="reveal eyebrow eyebrow-light mb-6">
-        <span className="ornament" /> Eventos <span className="ornament" />
-      </p>
-      <span
-        aria-hidden
-        className="reveal reveal-delay-1 block mx-auto"
-        style={{ width: 48, height: 0, borderTop: "1px solid #C4915A", marginBottom: 24 }}
-      />
-      <h2
-        className="reveal reveal-delay-1 font-display leading-[1.1] text-balance"
-        style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 400 }}
+    <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+      {/* Left: copy */}
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={stagger(0.08, 0.1)}
+        className="text-off-white"
       >
-        Aniversários e <span className="italic" style={{ color: "#C4915A" }}>Confraternizações</span>
-      </h2>
-      <p
-        className="reveal reveal-delay-2 mx-auto font-serif-italic italic mt-6"
-        style={{ maxWidth: 540, fontSize: "1.1rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.7 }}
-      >
-        Reúna até 10 pessoas num cenário que dispensa decoração.
-      </p>
+        <motion.p variants={fadeUp} className="eyebrow eyebrow-light mb-6">
+          <span className="ornament" /> Eventos & Celebrações <span className="ornament" />
+        </motion.p>
 
-      <a
-        href={WHATSAPP}
-        target="_blank"
-        rel="noreferrer"
-        className="reveal reveal-delay-3 inline-flex items-center justify-center gap-3 mt-10 sm:mt-12 font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:brightness-110 hover:-translate-y-0.5"
-        style={{
-          background: "#A0522D",
-          color: "#FAF7F2",
-          padding: "16px 40px",
-          letterSpacing: "0.15em",
-          borderRadius: "2px",
-          boxShadow: "0 14px 36px -14px rgba(160,82,45,0.6)",
-        }}
+        <motion.span
+          variants={{
+            hidden: { scaleX: 0 },
+            show: { scaleX: 1, transition: { duration: 0.9, ease: easeLuxe } },
+          }}
+          className="block origin-left"
+          style={{ width: 56, height: 1, background: "#C4915A", marginBottom: 24 }}
+        />
+
+        <motion.h2
+          variants={fadeUp}
+          className="font-display leading-[1.08] text-balance"
+          style={{ fontSize: "clamp(2.1rem, 4.5vw, 3.6rem)", fontWeight: 400, letterSpacing: "-0.01em" }}
+        >
+          Um cenário que <span className="italic" style={{ color: "#F5E6D0" }}>dispensa decoração.</span>
+        </motion.h2>
+
+        <motion.p
+          variants={fadeUp}
+          className="font-serif-italic italic mt-6"
+          style={{ maxWidth: 520, fontSize: "1.15rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.7 }}
+        >
+          Reúna até 10 pessoas em um refúgio nas falésias para celebrar o que importa
+          — com privacidade, beleza e atendimento sob medida.
+        </motion.p>
+
+        <ul className="mt-8 space-y-3.5">
+          {bullets.map((b) => (
+            <motion.li key={b} variants={fadeUp} className="flex items-start gap-3 text-off-white/90">
+              <span
+                className="shrink-0 mt-1 flex items-center justify-center"
+                style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(196,145,90,0.25)", border: "1px solid #C4915A" }}
+              >
+                <Check size={11} strokeWidth={2.5} className="text-gold" />
+              </span>
+              <span className="text-[15px]" style={{ fontFamily: "'Quicksand', sans-serif" }}>{b}</span>
+            </motion.li>
+          ))}
+        </ul>
+
+        <motion.a
+          variants={fadeUp}
+          href={WHATSAPP}
+          target="_blank"
+          rel="noreferrer"
+          className="group relative inline-flex items-center justify-center gap-3 mt-10 font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden"
+          style={{
+            background: "#FAF7F2",
+            color: "#A0522D",
+            padding: "16px 36px",
+            letterSpacing: "0.18em",
+            borderRadius: "2px",
+            boxShadow: "0 14px 36px -14px rgba(0,0,0,0.35)",
+          }}
+        >
+          <span className="relative z-10">Solicitar Orçamento</span>
+          <span aria-hidden className="relative z-10 transition-transform duration-500 group-hover:translate-x-1">→</span>
+          <span
+            aria-hidden
+            className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+            style={{
+              background:
+                "linear-gradient(120deg, transparent 30%, rgba(196,145,90,0.25) 50%, transparent 70%)",
+            }}
+          />
+        </motion.a>
+      </motion.div>
+
+      {/* Right: floating photo */}
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        variants={maskReveal}
+        className="relative"
       >
-        Solicitar Orçamento no WhatsApp <span aria-hidden>→</span>
-      </a>
+        <div
+          className="relative overflow-hidden"
+          style={{
+            aspectRatio: "4/5",
+            borderRadius: 2,
+            boxShadow: "0 40px 80px -24px rgba(0,0,0,0.5)",
+            border: "8px solid #FAF7F2",
+          }}
+        >
+          <img
+            src={veranda}
+            alt="Varanda Casa Robelú ao pôr do sol"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* Inset secondary photo */}
+        <div
+          className="hidden md:block absolute -bottom-8 -left-8 w-[42%] overflow-hidden"
+          style={{
+            aspectRatio: "1/1",
+            border: "8px solid #FAF7F2",
+            borderRadius: 2,
+            boxShadow: "0 30px 60px -20px rgba(0,0,0,0.5)",
+          }}
+        >
+          <img src={bg} alt="Casa à noite" loading="lazy" className="w-full h-full object-cover" />
+        </div>
+
+        {/* Decorative dots */}
+        <div
+          aria-hidden
+          className="hidden md:block absolute -top-6 -right-6 w-24 h-24 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.45) 1.2px, transparent 1.2px)",
+            backgroundSize: "10px 10px",
+          }}
+        />
+      </motion.div>
     </div>
   </section>
 );

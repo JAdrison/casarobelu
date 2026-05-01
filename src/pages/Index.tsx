@@ -1,12 +1,14 @@
 import { useReveal } from "@/hooks/useReveal";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { QuartosShowcase } from "@/components/QuartosShowcase";
 import { Promise } from "@/components/Promise";
 import { Casa } from "@/components/Casa";
 import { Experiencias } from "@/components/Experiencias";
 import { Galeria } from "@/components/Galeria";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Eventos } from "@/components/Eventos";
+import { Servicos } from "@/components/Servicos";
 import { Stats } from "@/components/Stats";
 import { Reservas } from "@/components/Reservas";
 import { Footer } from "@/components/Footer";
@@ -30,11 +32,13 @@ const Index = () => {
     <main className="bg-off-white text-dark-text overflow-x-hidden">
       <Navbar />
       <Hero />
+      <QuartosShowcase />
       <Promise />
       <Casa />
       <Experiencias />
       <Galeria />
       <Eventos />
+      <Servicos />
       <Depoimentos />
       <Stats />
       <Reservas />
