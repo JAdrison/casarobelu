@@ -1,14 +1,17 @@
 import { useReveal } from "@/hooks/useReveal";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { QuartosShowcase } from "@/components/QuartosShowcase";
+import { ExternoShowcase } from "@/components/ExternoShowcase";
 import { Promise } from "@/components/Promise";
-import { Casa } from "@/components/Casa";
+import { PeNaAreia } from "@/components/PeNaAreia";
+import { Lazer } from "@/components/Lazer";
 import { Experiencias } from "@/components/Experiencias";
 import { Galeria } from "@/components/Galeria";
-import { Depoimentos } from "@/components/Depoimentos";
 import { Eventos } from "@/components/Eventos";
 import { Servicos } from "@/components/Servicos";
+import { EspacoInterno } from "@/components/EspacoInterno";
+import { Quartos } from "@/components/Quartos";
+import { Depoimentos } from "@/components/Depoimentos";
 import { Stats } from "@/components/Stats";
 import { Reservas } from "@/components/Reservas";
 import { Footer } from "@/components/Footer";
@@ -25,20 +28,23 @@ const Index = () => {
       if (!el) { el = document.createElement("meta"); el.setAttribute("name", name); document.head.appendChild(el); }
       el.setAttribute("content", content);
     };
-    setMeta("description", "Casa Robelú — refúgio exclusivo nas falésias de Morro Branco, Beberibe/CE. Até 10 hóspedes, vista 180° para o mar e privacidade total.");
+    setMeta("description", "Casa Robelú — refúgio pé na areia em Morro Branco, Beberibe/CE. Até 23 hóspedes, vista 180° para o mar, piscina, vôlei e privacidade total.");
   }, []);
 
   return (
     <main className="bg-off-white text-dark-text overflow-x-hidden">
       <Navbar />
       <Hero />
-      <QuartosShowcase />
+      <ExternoShowcase />
       <Promise />
-      <Casa />
+      <PeNaAreia />
+      <Lazer />
       <Experiencias />
       <Galeria />
       <Eventos />
       <Servicos />
+      <EspacoInterno />
+      <Quartos />
       <Depoimentos />
       <Stats />
       <Reservas />
