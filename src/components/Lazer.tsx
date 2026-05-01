@@ -94,7 +94,7 @@ export const Lazer = () => (
         />
         <motion.p
           variants={fadeUp}
-          className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75 mb-7"
+          className="text-[17px] sm:text-[18px] leading-[1.7] text-dark-text/90 mb-7"
         >
           Reúna até 23 pessoas em uma estrutura pensada para grupos: piscina de
           4×8m sob pergolado, deck com churrasqueira e freezer, quadra com rede de
@@ -106,9 +106,10 @@ export const Lazer = () => (
             <motion.li
               key={a}
               variants={fadeUp}
-              className="flex items-start gap-3 text-dark-text/80 text-[15px]"
+              className="flex items-start gap-3 text-dark-text/92"
+              style={{ fontSize: "16px", lineHeight: 1.55 }}
             >
-              <span className="mt-2 w-1 h-1 bg-terracota shrink-0" />
+              <span className="mt-2 w-1.5 h-1.5 bg-terracota shrink-0" />
               {a}
             </motion.li>
           ))}

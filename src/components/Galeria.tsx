@@ -71,12 +71,12 @@ export const Galeria = () => (
             <div className="absolute inset-0 bg-gradient-to-t from-dark-text/75 via-dark-text/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <figcaption className="absolute inset-x-0 bottom-0 p-5 text-off-white opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
               <p
-                className="text-[10px] uppercase tracking-[0.28em]"
-                style={{ fontFamily: "'Quicksand', sans-serif", color: "#C4915A" }}
+                className="uppercase"
+                style={{ fontFamily: "'Quicksand', sans-serif", color: "#E0B582", fontSize: "12px", letterSpacing: "0.2em", fontWeight: 600 }}
               >
                 {String(i + 1).padStart(2, "0")} / {String(tiles.length).padStart(2, "0")}
               </p>
-              <p className="font-serif-italic italic text-base mt-1">{t.label}</p>
+              <p className="font-serif-italic italic mt-1.5" style={{ fontSize: "18px" }}>{t.label}</p>
             </figcaption>
           </motion.figure>
         ))}

@@ -39,7 +39,7 @@ export const Experiencias = () => (
             key={c.title}
             className={`reveal reveal-delay-${i + 1} group p-7 sm:p-10 border border-off-white/15 bg-off-white/[0.02] hover:bg-off-white/[0.05] hover:border-gold/40 transition-all duration-700`}
           >
-            <p className="eyebrow eyebrow-light text-[11px]">{c.label}</p>
+            <p className="eyebrow eyebrow-light">{c.label}</p>
             <h3 className="font-display italic text-2xl sm:text-3xl mt-5 sm:mt-6 text-off-white">{c.title}</h3>
             <div className="w-10 h-px bg-gold my-5 sm:my-6 transition-all duration-500 group-hover:w-20" />
             <p className="font-serif-italic text-base sm:text-lg text-off-white/70 leading-relaxed">{c.text}</p>
@@ -75,8 +75,8 @@ export const Experiencias = () => (
           </p>
           <a
             href="#reservas"
-            className="inline-flex items-center gap-2 mt-8 text-[12px] uppercase tracking-[0.2em] text-gold hover:text-off-white transition-colors"
-            style={{ fontFamily: "'Quicksand', sans-serif", borderBottom: "1px solid currentColor", paddingBottom: 4 }}
+            className="inline-flex items-center gap-2 mt-8 uppercase text-gold hover:text-off-white transition-colors"
+            style={{ fontFamily: "'Quicksand', sans-serif", fontSize: "14px", letterSpacing: "0.14em", fontWeight: 600, borderBottom: "1px solid currentColor", paddingBottom: 4 }}
           >
             Reservar a estadia <span aria-hidden>→</span>
           </a>

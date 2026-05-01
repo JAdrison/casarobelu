@@ -33,7 +33,7 @@
     --secondary-foreground: var(--dark-text);
 
     --muted: 36 25% 92%;
-    --muted-foreground: 24 10% 35%;
+    --muted-foreground: 24 15% 22%;
 
     --accent: var(--gold);
     --accent-foreground: var(--dark-text);
@@ -65,8 +65,15 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; line-height: 1.6; }
   }
   ::selection { background: hsl(var(--terracota)); color: hsl(var(--off-white)); }
 }
@@ -76,10 +83,27 @@
   .font-serif-italic { font-family: 'Cormorant Garamond', serif; }
   .font-sans-soft { font-family: 'Quicksand', sans-serif; }
 
+  /* ===== Tipografia: escala unificada ===== */
+  .text-body-lg { font-size: 18px; line-height: 1.75; }
+  .text-body    { font-size: 17px; line-height: 1.7;  }
+  .text-body-sm { font-size: 15px; line-height: 1.6;  }
+  .text-micro {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  @media (max-width: 640px) {
+    .text-body-lg { font-size: 17px; line-height: 1.7; }
+    .text-body    { font-size: 16px; line-height: 1.65; }
+  }
+
   .eyebrow {
-    @apply font-sans-soft text-xs tracking-[0.3em] uppercase;
+    @apply font-sans-soft uppercase;
+    font-size: 13px;
+    letter-spacing: 0.22em;
     color: hsl(var(--terracota));
-    font-weight: 500;
+    font-weight: 600;
   }
   .eyebrow-light { color: hsl(var(--gold)); }
 
@@ -90,12 +114,16 @@
   }
 
   .btn-hero {
-    @apply inline-flex items-center gap-3 px-6 sm:px-9 py-3.5 sm:py-4 font-sans-soft text-[12px] sm:text-sm tracking-[0.18em] sm:tracking-[0.2em] uppercase;
+    @apply inline-flex items-center gap-3 px-7 sm:px-10 py-4 sm:py-[18px] font-sans-soft uppercase;
     background: hsl(var(--terracota));
     color: hsl(var(--off-white));
     transition: all 0.4s var(--transition-smooth);
     border: 1px solid hsl(var(--terracota));
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    font-weight: 600;
   }
+  @media (min-width: 640px) { .btn-hero { font-size: 15px; } }
   .btn-hero:hover {
     background: hsl(var(--gold));
     border-color: hsl(var(--gold));
@@ -104,12 +132,16 @@
   }
 
   .btn-ghost-light {
-    @apply inline-flex items-center gap-3 px-6 sm:px-9 py-3.5 sm:py-4 font-sans-soft text-[12px] sm:text-sm tracking-[0.18em] sm:tracking-[0.2em] uppercase;
+    @apply inline-flex items-center gap-3 px-7 sm:px-10 py-4 sm:py-[18px] font-sans-soft uppercase;
     background: hsl(var(--off-white));
     color: hsl(var(--terracota));
     transition: all 0.4s var(--transition-smooth);
     border: 1px solid hsl(var(--off-white));
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    font-weight: 600;
   }
+  @media (min-width: 640px) { .btn-ghost-light { font-size: 15px; } }
   .btn-ghost-light:hover {
     background: transparent;
     color: hsl(var(--off-white));
