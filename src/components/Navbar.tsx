@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import logoRobelu from "@/assets/logo-robelu-transparent.png";
 
 const links = [
   { href: "#casa", label: "A Casa" },
@@ -40,10 +41,14 @@ export const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          style={{ fontFamily: "'Josefin Sans', sans-serif", fontWeight: 700 }}
-          className={`text-lg sm:text-2xl uppercase tracking-[0.12em] sm:tracking-[0.15em] ${scrolled ? "text-terracota" : "text-off-white"}`}
+          className="flex items-center"
+          aria-label="Casa Robelú — início"
         >
-          CASA ROBELÚ
+          <img
+            src={logoRobelu}
+            alt="Casa Robelú"
+            className={`h-10 sm:h-14 w-auto transition-all duration-500 ${scrolled ? "" : "brightness-0 invert"}`}
+          />
         </motion.a>
 
         <ul className="hidden md:flex items-center gap-10">
