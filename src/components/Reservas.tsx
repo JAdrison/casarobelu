@@ -32,34 +32,34 @@ export const Reservas = () => {
           Seu próximo refúgio está
           <br />a uma reserva de distância.
         </h2>
-        <p className="reveal reveal-delay-2 mt-6 sm:mt-8 font-serif-italic text-base sm:text-xl text-off-white/80 max-w-2xl mx-auto">
+        <p className="reveal reveal-delay-2 mt-6 sm:mt-8 font-serif-italic text-lg sm:text-2xl text-off-white/95 max-w-2xl mx-auto leading-snug">
           Disponibilidade limitada para feriados, Réveillon e alta temporada.
           Reserve com antecedência e garanta sua experiência.
         </p>
 
         <div className="reveal reveal-delay-3 grid sm:grid-cols-3 gap-5 sm:gap-6 mt-10 sm:mt-14 max-w-4xl mx-auto text-left">
-          <div className="flex items-start gap-3 text-off-white/85">
+          <div className="flex items-start gap-3 text-off-white">
             <Calendar className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
-            <p className="text-sm leading-relaxed">Check-in 9h · Check-out 16h</p>
+            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>Check-in 9h · Check-out 16h</p>
           </div>
-          <div className="flex items-start gap-3 text-off-white/85">
+          <div className="flex items-start gap-3 text-off-white">
             <Wallet className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
-            <p className="text-sm leading-relaxed">
+            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>
               Diária: R$ 2.000<br />
               Final de semana (sex+sáb+dom): R$ 4.000<br />
-              <span className="text-off-white/60">Reserva mínima: 2 noites</span>
+              <span className="text-off-white/70">Reserva mínima: 2 noites</span>
             </p>
           </div>
-          <div className="flex items-start gap-3 text-off-white/85">
+          <div className="flex items-start gap-3 text-off-white">
             <Users className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
-            <p className="text-sm leading-relaxed">Capacidade até 23 pessoas<br /><span className="text-off-white/60">Grupos maiores sob consulta</span></p>
+            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>Capacidade até 23 pessoas<br /><span className="text-off-white/70">Grupos maiores sob consulta</span></p>
           </div>
         </div>
 
         {/* Aviso destacado */}
         <div className="reveal reveal-delay-4 mt-8 sm:mt-10 max-w-3xl mx-auto flex items-center gap-3 px-5 sm:px-6 py-4 border border-gold bg-gold/10 text-gold">
           <AlertCircle className="w-5 h-5 shrink-0" strokeWidth={1.4} />
-          <p className="text-sm tracking-wide text-left">
+          <p className="text-left" style={{ fontSize: "15px", lineHeight: 1.5 }}>
             Não realizamos reservas de apenas 1 diária. <strong className="font-semibold">Estadia mínima: 2 noites.</strong>
           </p>
         </div>
@@ -75,17 +75,18 @@ export const Reservas = () => {
             <Field label="Data de saída" type="date" value={form.fim} onChange={(v) => setForm({ ...form, fim: v })} />
 
             {/* Aviso dentro do form, abaixo das datas */}
-            <div className="sm:col-span-2 flex items-start gap-2 text-gold/90 text-xs">
+            <div className="sm:col-span-2 flex items-start gap-2 text-gold" style={{ fontSize: "13px", lineHeight: 1.5 }}>
               <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" strokeWidth={1.4} />
               <span>Estadia mínima de 2 noites. Reservas de 1 diária não são aceitas.</span>
             </div>
 
             <div className="sm:col-span-2">
-              <label className="block text-[11px] tracking-[0.25em] uppercase text-off-white/60 mb-2">Hóspedes</label>
+              <label className="block uppercase text-off-white/80 mb-2" style={{ fontSize: "13px", letterSpacing: "0.18em", fontWeight: 600 }}>Hóspedes</label>
               <select
                 value={form.hospedes}
                 onChange={(e) => setForm({ ...form, hospedes: e.target.value })}
                 className="w-full bg-transparent border-b border-off-white/30 py-3 text-off-white focus:border-gold outline-none transition-colors"
+                style={{ fontSize: "16px" }}
               >
                 {Array.from({ length: 23 }, (_, i) => i + 1).map((n) => (
                   <option key={n} value={n} className="bg-dark-text">
@@ -95,7 +96,7 @@ export const Reservas = () => {
                 <option value="24" className="bg-dark-text">Mais de 23 pessoas</option>
               </select>
               {grupoGrande && (
-                <p className="mt-3 text-xs text-gold flex items-center gap-2">
+                <p className="mt-3 text-gold flex items-center gap-2" style={{ fontSize: "13px" }}>
                   <AlertCircle className="w-4 h-4" strokeWidth={1.4} />
                   Para grupos acima de 23 pessoas, entre em contato pelo WhatsApp.
                 </p>
@@ -112,7 +113,7 @@ export const Reservas = () => {
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="reveal mt-10 inline-block font-serif-italic italic text-lg text-gold hover:text-off-white transition-colors"
+          className="reveal mt-10 inline-block font-serif-italic italic text-xl text-gold hover:text-off-white transition-colors"
         >
           Ou fale diretamente pelo WhatsApp →
         </a>
@@ -125,7 +126,7 @@ const Field = ({
   label, value, onChange, type = "text", required, maxLength,
 }: { label: string; value: string; onChange: (v: string) => void; type?: string; required?: boolean; maxLength?: number }) => (
   <div>
-    <label className="block text-[11px] tracking-[0.25em] uppercase text-off-white/60 mb-2">{label}</label>
+    <label className="block uppercase text-off-white/80 mb-2" style={{ fontSize: "13px", letterSpacing: "0.18em", fontWeight: 600 }}>{label}</label>
     <input
       type={type}
       value={value}
@@ -133,6 +134,7 @@ const Field = ({
       maxLength={maxLength}
       onChange={(e) => onChange(e.target.value)}
       className="w-full bg-transparent border-b border-off-white/30 py-3 text-off-white placeholder:text-off-white/30 focus:border-gold outline-none transition-colors"
+      style={{ fontSize: "16px" }}
     />
   </div>
 );

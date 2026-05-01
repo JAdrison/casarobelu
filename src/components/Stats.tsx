@@ -15,7 +15,7 @@ export const Stats = () => (
             <span className="text-gold">{s.suf}</span>
           </p>
           <div className="w-8 h-px bg-off-white/40 mx-auto my-5" />
-          <p className="font-sans-soft text-[12px] tracking-[0.25em] uppercase text-off-white/80">
+          <p className="font-sans-soft uppercase text-off-white" style={{ fontSize: "13px", letterSpacing: "0.2em", fontWeight: 600 }}>
             {s.label}
           </p>
         </div>

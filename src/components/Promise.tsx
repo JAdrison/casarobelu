@@ -95,11 +95,12 @@ export const Promise = () => (
         variants={fadeUp}
         className="mx-auto"
         style={{
-          maxWidth: 580,
+          maxWidth: 620,
           marginTop: 32,
-          lineHeight: 1.85,
-          fontSize: "1.05rem",
-          color: "#6B5E52",
+          lineHeight: 1.7,
+          fontSize: "1.15rem",
+          color: "#3D2F24",
+          fontWeight: 400,
         }}
       >
         A Casa Robelú nasceu para grupos que recusam o comum. Vista privilegiada
@@ -109,10 +110,10 @@ export const Promise = () => (
 
       <motion.p
         variants={fadeUp}
-        className="mt-8 inline-flex items-center justify-center gap-2 text-[11px] sm:text-[12px] text-gold"
-        style={{ fontFamily: "'Quicksand', sans-serif", letterSpacing: "0.15em" }}
+        className="mt-8 inline-flex items-center justify-center gap-2 text-gold"
+        style={{ fontFamily: "'Quicksand', sans-serif", letterSpacing: "0.12em", fontSize: "13px", fontWeight: 500 }}
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <rect x="3" y="4" width="18" height="18" rx="2" />
           <path d="M16 2v4M8 2v4M3 10h18" />
         </svg>
@@ -155,21 +156,21 @@ export const Promise = () => (
               fontFamily: "'Quicksand', sans-serif",
               fontWeight: 600,
               textTransform: "uppercase",
-              letterSpacing: "0.18em",
-              fontSize: "0.78rem",
+              letterSpacing: "0.14em",
+              fontSize: "0.95rem",
               color: "#1A1A1A",
             }}
           >
             {p.title}
           </h3>
-          <div className="mx-auto my-3" style={{ width: 20, height: 1, background: "#C4915A" }} />
+          <div className="mx-auto my-3" style={{ width: 24, height: 1, background: "#C4915A" }} />
           <p
             className="font-serif-italic italic"
             style={{
-              fontSize: "1rem",
-              lineHeight: 1.6,
-              color: "#6B5E52",
-              maxWidth: 240,
+              fontSize: "1.1rem",
+              lineHeight: 1.55,
+              color: "#3D2F24",
+              maxWidth: 260,
               marginInline: "auto",
             }}
           >

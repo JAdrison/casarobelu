@@ -61,7 +61,7 @@ export const PeNaAreia = () => (
         />
         <motion.p
           variants={fadeUp}
-          className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75"
+          className="text-[17px] sm:text-[18px] leading-[1.7] text-dark-text/90"
         >
           Você acorda com o som do mar e abre os olhos para o horizonte. A passarela
           leva direto à praia — sem ruas para atravessar, sem turistas no caminho.
@@ -70,8 +70,8 @@ export const PeNaAreia = () => (
         <motion.a
           variants={fadeUp}
           href="#galeria"
-          className="inline-flex items-center gap-2 mt-8 text-[12px] uppercase tracking-[0.2em] text-terracota hover:text-gold transition-colors"
-          style={{ fontFamily: "'Quicksand', sans-serif", borderBottom: "1px solid currentColor", paddingBottom: 4 }}
+          className="inline-flex items-center gap-2 mt-8 uppercase text-terracota hover:text-gold transition-colors"
+          style={{ fontFamily: "'Quicksand', sans-serif", fontSize: "13px", letterSpacing: "0.16em", fontWeight: 600, borderBottom: "1px solid currentColor", paddingBottom: 4 }}
         >
           Ver Galeria <span aria-hidden>→</span>
         </motion.a>

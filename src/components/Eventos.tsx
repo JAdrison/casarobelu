@@ -82,16 +82,16 @@ export const Eventos = () => (
           — com privacidade, beleza e atendimento sob medida.
         </motion.p>
 
-        <ul className="mt-8 space-y-3.5">
+        <ul className="mt-8 space-y-4">
           {bullets.map((b) => (
-            <motion.li key={b} variants={fadeUp} className="flex items-start gap-3 text-off-white/90">
+            <motion.li key={b} variants={fadeUp} className="flex items-start gap-3 text-off-white">
               <span
                 className="shrink-0 mt-1 flex items-center justify-center"
-                style={{ width: 18, height: 18, borderRadius: "50%", background: "rgba(196,145,90,0.25)", border: "1px solid #C4915A" }}
+                style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(196,145,90,0.25)", border: "1px solid #C4915A" }}
               >
-                <Check size={11} strokeWidth={2.5} className="text-gold" />
+                <Check size={12} strokeWidth={2.5} className="text-gold" />
               </span>
-              <span className="text-[15px]" style={{ fontFamily: "'Quicksand', sans-serif" }}>{b}</span>
+              <span style={{ fontFamily: "'Quicksand', sans-serif", fontSize: "16.5px", lineHeight: 1.55, fontWeight: 400 }}>{b}</span>
             </motion.li>
           ))}
         </ul>
@@ -101,12 +101,14 @@ export const Eventos = () => (
           href={WHATSAPP}
           target="_blank"
           rel="noreferrer"
-          className="group relative inline-flex items-center justify-center gap-3 mt-10 font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden"
+          className="group relative inline-flex items-center justify-center gap-3 mt-10 font-sans-soft uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden"
           style={{
             background: "#FAF7F2",
             color: "#A0522D",
-            padding: "16px 36px",
-            letterSpacing: "0.18em",
+            padding: "18px 40px",
+            fontSize: "14px",
+            letterSpacing: "0.14em",
+            fontWeight: 600,
             borderRadius: "2px",
             boxShadow: "0 14px 36px -14px rgba(0,0,0,0.35)",
           }}

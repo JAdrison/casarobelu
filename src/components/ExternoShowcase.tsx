@@ -54,12 +54,12 @@ export const ExternoShowcase = () => (
             <div className="absolute inset-0 bg-gradient-to-t from-dark-text/65 via-dark-text/10 to-transparent" />
             <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6 text-off-white">
               <p
-                className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em]"
-                style={{ fontFamily: "'Quicksand', sans-serif", color: "#C4915A" }}
+                className="uppercase"
+                style={{ fontFamily: "'Quicksand', sans-serif", color: "#E0B582", fontSize: "13px", letterSpacing: "0.2em", fontWeight: 600 }}
               >
                 {it.label}
               </p>
-              <p className="font-serif-italic italic text-sm sm:text-base mt-1.5 text-off-white/90 leading-snug">
+              <p className="font-serif-italic italic mt-2 text-off-white leading-snug" style={{ fontSize: "17px" }}>
                 {it.desc}
               </p>
             </figcaption>

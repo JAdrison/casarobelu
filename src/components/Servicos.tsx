@@ -36,21 +36,22 @@ export const Servicos = () => (
             style={{ color: "#A0522D" }}
           />
           <h3
-            className="mt-4 text-[11px] sm:text-[12px]"
+            className="mt-4"
             style={{
               fontFamily: "'Quicksand', sans-serif",
               fontWeight: 600,
               textTransform: "uppercase",
-              letterSpacing: "0.18em",
+              letterSpacing: "0.14em",
+              fontSize: "13.5px",
               color: "#1A1A1A",
             }}
           >
             {it.title}
           </h3>
-          <div className="mx-auto my-3" style={{ width: 18, height: 1, background: "#C4915A" }} />
+          <div className="mx-auto my-3" style={{ width: 22, height: 1, background: "#C4915A" }} />
           <p
-            className="font-serif-italic italic text-[13px] sm:text-sm leading-snug"
-            style={{ color: "#6B5E52" }}
+            className="font-serif-italic italic leading-snug"
+            style={{ color: "#3D2F24", fontSize: "16px", lineHeight: 1.5 }}
           >
             {it.desc}
           </p>

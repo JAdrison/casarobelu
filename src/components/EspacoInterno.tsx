@@ -44,7 +44,7 @@ export const EspacoInterno = () => (
         />
         <motion.p
           variants={fadeUp}
-          className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75"
+          className="text-[17px] sm:text-[18px] leading-[1.7] text-dark-text/90"
         >
           Sala ampla com sofás para todos, mesa de jantar para 10, cozinha equipada
           e enxoval completo. Receber 23 pessoas aqui é simples — a casa foi feita

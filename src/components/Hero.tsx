@@ -95,12 +95,13 @@ export const Hero = () => {
           >
             <span aria-hidden style={{ width: 48, height: 1, background: "#C4915A" }} />
             <span
-              className="text-[10px] sm:text-[11px] uppercase"
+              className="uppercase"
               style={{
                 fontFamily: "'Quicksand', sans-serif",
-                color: "#C4915A",
-                letterSpacing: "0.32em",
-                fontWeight: 500,
+                color: "#E0B582",
+                letterSpacing: "0.22em",
+                fontWeight: 600,
+                fontSize: "13px",
               }}
             >
               Morro Branco · Ceará
@@ -134,12 +135,13 @@ export const Hero = () => {
           </h1>
 
           <motion.p
-            className="font-serif-italic font-light mt-6 sm:mt-8 text-base sm:text-lg md:text-xl"
+            className="font-serif-italic mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl"
             style={{
-              color: "rgba(255,255,255,0.85)",
-              letterSpacing: "0.04em",
-              maxWidth: 520,
+              color: "rgba(255,255,255,0.95)",
+              letterSpacing: "0.015em",
+              maxWidth: 560,
               lineHeight: 1.55,
+              fontWeight: 400,
             }}
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -159,12 +161,14 @@ export const Hero = () => {
           >
             <a
               href="#reservas"
-              className="group relative inline-flex items-center justify-center gap-3 font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-3 font-sans-soft uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden"
               style={{
                 background: "#A0522D",
                 color: "#FAF7F2",
-                padding: "16px 36px",
-                letterSpacing: "0.18em",
+                padding: "18px 40px",
+                fontSize: "14px",
+                letterSpacing: "0.14em",
+                fontWeight: 600,
                 borderRadius: "2px",
                 boxShadow: "0 14px 36px -14px rgba(160,82,45,0.6)",
               }}
@@ -182,12 +186,14 @@ export const Hero = () => {
             </a>
             <a
               href="#casa"
-              className="inline-flex items-center justify-center gap-3 font-sans-soft text-[12px] sm:text-sm uppercase transition-all duration-500 hover:bg-white/10 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-3 font-sans-soft uppercase transition-all duration-500 hover:bg-white/10 hover:-translate-y-0.5"
               style={{
                 background: "transparent",
                 color: "#FAF7F2",
-                padding: "16px 36px",
-                letterSpacing: "0.18em",
+                padding: "18px 40px",
+                fontSize: "14px",
+                letterSpacing: "0.14em",
+                fontWeight: 600,
                 borderRadius: "2px",
                 border: "1px solid rgba(255,255,255,0.7)",
               }}
@@ -213,10 +219,10 @@ export const Hero = () => {
             <span className="font-display italic text-gold text-lg">R</span>
           </div>
           <div>
-            <p className="text-[10px] uppercase text-gold tracking-[0.25em]" style={{ fontFamily: "'Quicksand', sans-serif" }}>
+            <p className="uppercase text-gold" style={{ fontFamily: "'Quicksand', sans-serif", fontSize: "12px", letterSpacing: "0.18em", fontWeight: 600 }}>
               Desde 1986
             </p>
-            <p className="text-[12px] text-off-white/85 font-serif-italic italic">
+            <p className="text-off-white/95 font-serif-italic italic" style={{ fontSize: "14px" }}>
               40 anos recebendo
             </p>
           </div>
