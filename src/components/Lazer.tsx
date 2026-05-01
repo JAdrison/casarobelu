@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import deckMar from "@/assets/externa-deck-mar.webp";
-import redes from "@/assets/externa-redes.webp";
+import piscinaPergolado from "@/assets/piscina-pergolado.webp";
+import quadraVolei from "@/assets/quadra-volei.webp";
 import capela from "@/assets/externa-capela.webp";
 import { fadeUp, stagger, maskReveal, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const amenities = [
-  "Piscina 4m × 8m (1,40m de profundidade uniforme)",
+  "Piscina 4m × 8m sob pergolado de madeira",
   "Deck com churrasqueira e freezer",
-  "Varanda com redes para a sesta",
-  "Quadra de vôlei na areia",
+  "Quadra poliesportiva com rede de vôlei",
   "Capela de oração no jardim",
+  "Espreguiçadeiras de frente para o mar",
   "Estacionamento privativo dentro da propriedade",
   "Wi-Fi em toda a casa",
   "Cozinha equipada e enxoval completo",
@@ -36,8 +36,8 @@ export const Lazer = () => (
         className="relative"
       >
         <img
-          src={deckMar}
-          alt="Deck com piscina, mesas e vista para o mar"
+          src={piscinaPergolado}
+          alt="Piscina sob pergolado com vista para o mar"
           loading="lazy"
           decoding="async"
           className="w-full object-cover"
@@ -52,7 +52,7 @@ export const Lazer = () => (
             aspectRatio: "1/1",
           }}
         >
-          <img src={redes} alt="Varanda com redes" loading="lazy" className="w-full h-full object-cover" />
+          <img src={quadraVolei} alt="Quadra de vôlei com piscina e capela" loading="lazy" className="w-full h-full object-cover" />
         </div>
         <div
           className="hidden md:block absolute -top-6 -left-6 w-[28%] overflow-hidden"
@@ -97,8 +97,8 @@ export const Lazer = () => (
           className="text-base sm:text-[17px] leading-[1.85] sm:leading-[1.9] text-dark-text/75 mb-7"
         >
           Reúna até 23 pessoas em uma estrutura pensada para grupos: piscina de
-          4×8m com profundidade uniforme, deck com churrasqueira e freezer, varanda
-          com redes para a sesta, quadra de vôlei e até uma capela de oração no jardim.
+          4×8m sob pergolado, deck com churrasqueira e freezer, quadra com rede de
+          vôlei, espreguiçadeiras de frente pro mar e uma capela no jardim.
           Tudo em uma só casa, sem precisar sair.
         </motion.p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
