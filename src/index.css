@@ -146,34 +146,6 @@
 .anim-d3 { animation-delay: 0.8s; }
 .anim-d4 { animation-delay: 1.1s; }
 
-/* ============ Casa: blocos uniformes texto + imagem ============ */
-.casa-block {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-}
-.casa-media { order: -1; }
-.casa-text { order: 0; }
-.casa-img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-  display: block;
-}
-@media (min-width: 768px) {
-  .casa-block {
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-  }
-  .casa-media { order: 0; }
-  .casa-block--reverse .casa-media { order: -1; }
-  .casa-img { height: 420px; }
-}
-
 /* ============ Galeria uniforme ============ */
 .galeria-uniform {
   display: grid;
@@ -182,7 +154,7 @@
 }
 .galeria-uniform img {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
   display: block;
   border-radius: 2px;
@@ -192,7 +164,19 @@
 }
 @media (min-width: 1024px) {
   .galeria-uniform { grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .galeria-uniform img { height: 280px; }
+  .galeria-uniform img { height: 300px; }
+}
+
+/* ============ Scrollbar premium ============ */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--off-white)); }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--terracota) / 0.4);
+    border-radius: 4px;
+    border: 2px solid hsl(var(--off-white));
+  }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--terracota) / 0.7); }
 }
 
 /* ============ Stats: numerais grandes + separador ============ */
