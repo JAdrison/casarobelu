@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import quarto1 from "@/assets/quarto-novo-1.png";
-import quarto2 from "@/assets/quarto-novo-2.png";
-import quarto3 from "@/assets/quarto-novo-3.png";
-import quarto4 from "@/assets/quarto-novo-4.png";
-import quarto5 from "@/assets/quarto-novo-5.png";
-import quarto6 from "@/assets/quarto-novo-6.png";
+import quarto1 from "@/assets/quarto-novo-1.webp";
+import quarto2 from "@/assets/quarto-novo-2.webp";
+import quarto3 from "@/assets/quarto-novo-3.webp";
+import quarto4 from "@/assets/quarto-novo-4.webp";
+import quarto5 from "@/assets/quarto-novo-5.webp";
+import quarto6 from "@/assets/quarto-novo-6.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const slides = [quarto1, quarto2, quarto3, quarto4, quarto5, quarto6];
