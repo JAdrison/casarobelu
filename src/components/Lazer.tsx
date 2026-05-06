@@ -64,7 +64,7 @@ export const Lazer = () => (
             aspectRatio: "1/1",
           }}
         >
-          <img src={quadraVolei} alt="Quadra de vôlei" loading="lazy" className="w-full h-full object-cover" />
+          <img src={quadraVolei} alt="Jardim com vista para a capela e ducha externa" loading="lazy" className="w-full h-full object-cover" />
         </div>
       </motion.div>
 
