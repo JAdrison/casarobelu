@@ -27,8 +27,8 @@ export const PeNaAreia = () => (
         <PhotoStack
           imageBack={gramadoMar}
           imageFront={virgemMar}
-          altBack="Gramado com coqueiros e horizonte do mar"
-          altFront="Imagem da Virgem na ponta da falésia com vista para o mar"
+          altBack="Deck à beira-mar com vista para a praia de Morro Branco"
+          altFront="Mesa no deck coberto com vista 180° para o oceano"
         />
       </motion.div>
 
