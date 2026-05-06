@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import hospitalidadeVinho from "@/assets/hospitalidade-vinho.png";
+import hospitalidadeVinho from "@/assets/hospitalidade-vinho.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 export const Hospitalidade = () => (

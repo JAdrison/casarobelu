@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import casaSala from "@/assets/casa-sala.png";
-import casaJantar from "@/assets/casa-jantar.png";
-import casaCozinha from "@/assets/casa-cozinha.png";
-import casaRede from "@/assets/casa-rede.png";
+import casaSala from "@/assets/casa-sala.webp";
+import casaJantar from "@/assets/casa-jantar.webp";
+import casaCozinha from "@/assets/casa-cozinha.webp";
+import casaRede from "@/assets/casa-rede.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 export const Gastronomia = () => (

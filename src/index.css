@@ -234,3 +234,32 @@
 @media (min-width: 768px) {
   .promise-section { padding: 100px 24px; }
 }
+
+/* ============ Acessibilidade: reduce motion ============ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-indicator { animation: none; }
+}
+
+/* ============ Mobile: alvos de toque ============ */
+@media (max-width: 640px) {
+  a, button {
+    min-height: 44px;
+  }
+  /* Evita que ícones pequenos virem botões gigantes */
+  a.inline, button.inline,
+  a[role="presentation"], button[role="presentation"] {
+    min-height: auto;
+  }
+}
+
+/* ============ Mobile: títulos grandes não estouram ============ */
+@media (max-width: 380px) {
+  h1, h2 { word-break: break-word; hyphens: auto; }
+}
+

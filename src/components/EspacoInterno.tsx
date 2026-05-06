@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import sala from "@/assets/sala-estar.png";
-import jantar from "@/assets/renatos-bar.png";
+import sala from "@/assets/sala-estar.webp";
+import jantar from "@/assets/renatos-bar.webp";
 import { PhotoStack } from "./PhotoStack";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 

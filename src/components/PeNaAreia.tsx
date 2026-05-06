@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import gramadoMar from "@/assets/deck-mar-1.png";
-import virgemMar from "@/assets/deck-mar-2.png";
+import gramadoMar from "@/assets/deck-mar-1.webp";
+import virgemMar from "@/assets/deck-mar-2.webp";
 import { PhotoStack } from "./PhotoStack";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 

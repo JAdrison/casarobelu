@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import casaConceitoVideo from "@/assets/casa-conceito.mp4";
+import casaConceitoPoster from "@/assets/hero-aerea.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const inclusos = [
@@ -13,7 +15,35 @@ const inclusos = [
   "Estacionamento privativo",
 ];
 
-export const CasaInteira = () => (
+export const CasaInteira = () => {
+  const ref = useRef<HTMLVideoElement | null>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    // Respeita data-saver e usuários com reduce-motion
+    const dataSaver = (navigator as any).connection?.saveData;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (dataSaver || reduceMotion) return;
+
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            setShouldLoad(true);
+            io.disconnect();
+          }
+        });
+      },
+      { rootMargin: "200px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
   <section
     id="conceito"
     className="bg-champagne py-24 md:py-36 px-5 sm:px-6 relative overflow-hidden"
@@ -32,12 +62,14 @@ export const CasaInteira = () => (
         }}
       >
         <video
-          src={casaConceitoVideo}
+          ref={ref}
+          src={shouldLoad ? casaConceitoVideo : undefined}
+          poster={casaConceitoPoster}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           aria-label="Vídeo da Casa Robelú"
           className="w-full h-full object-cover"
         />
@@ -95,8 +127,10 @@ export const CasaInteira = () => (
         </motion.ul>
         <motion.a
           variants={fadeUp}
-          href="#reservas"
-          className="inline-flex items-center gap-2 uppercase text-terracota hover:text-gold transition-colors"
+          href="https://wa.me/5585997640313?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20a%20Casa%20Robel%C3%BA."
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 uppercase text-terracota hover:text-gold transition-colors min-h-[44px]"
           style={{
             fontFamily: "'Quicksand', sans-serif",
             fontSize: "13px",
@@ -111,4 +145,5 @@ export const CasaInteira = () => (
       </motion.div>
     </div>
   </section>
-);
+  );
+};
