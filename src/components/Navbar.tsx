@@ -111,8 +111,14 @@ export const Navbar = () => {
               </li>
             ))}
             <li>
-              <a href="#reservas" onClick={() => setOpen(false)} className="btn-hero mt-4">
-                Reservar
+              <a
+                href="https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA."
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="btn-hero mt-4 w-full justify-center"
+              >
+                Reservar via WhatsApp
               </a>
             </li>
           </ul>
