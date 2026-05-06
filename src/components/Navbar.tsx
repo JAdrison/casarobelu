@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import logoRobelu from "@/assets/logo-robelu-transparent.png";
+import logoRobelu from "@/assets/logo-robelu-full.png";
 
 const links = [
   { href: "#casa", label: "A Casa" },
@@ -47,8 +47,8 @@ export const Navbar = () => {
           <img
             src={logoRobelu}
             alt="Casa Robelú"
-            className={`h-10 sm:h-14 w-auto transition-all duration-500 ${scrolled ? "" : "brightness-0 invert"}`}
-            style={!scrolled ? { filter: "brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.45))" } : undefined}
+            className="h-12 sm:h-16 w-auto transition-all duration-500"
+            style={!scrolled ? { filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.55))" } : undefined}
           />
         </motion.a>
 
