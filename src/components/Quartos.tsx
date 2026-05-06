@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import quarto1 from "@/assets/quarto-1.webp";
-import quarto2 from "@/assets/quarto-2.webp";
-import quarto3 from "@/assets/quarto-3.webp";
+import quarto1 from "@/assets/quarto-novo-1.png";
+import quarto2 from "@/assets/quarto-novo-2.png";
+import quarto3 from "@/assets/quarto-novo-3.png";
+import quarto4 from "@/assets/quarto-novo-4.png";
+import quarto5 from "@/assets/quarto-novo-5.png";
+import quarto6 from "@/assets/quarto-novo-6.png";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
-const slides = [quarto1, quarto2, quarto3];
+const slides = [quarto1, quarto2, quarto3, quarto4, quarto5, quarto6];
 
 const distribuicao = [
   "2 suítes com ar-condicionado (cama casal + cama solteiro)",
