@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import piscinaPergolado from "@/assets/piscina-pergolado.webp";
-import quadraVolei from "@/assets/quadra-volei.webp";
+import quadraVolei from "@/assets/jardim-capela.png";
 import capela from "@/assets/capela.jpg";
 import capelaInterior from "@/assets/capela-interior.png";
 import { fadeUp, fadeIn, stagger, easeLuxe } from "@/lib/motion";
