@@ -9,7 +9,7 @@ const inclusos = [
   "Deck com churrasqueira à beira-mar",
   "Pé na areia · vista 180° para o mar",
   "Enxoval completo (lençóis, colchas, fronhas)",
-  "Wi-Fi e ar-condicionado nas suítes",
+  "Wi-Fi e ar-condicionado em quartos selecionados",
   "Estacionamento privativo",
 ];
 
