@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
-import salaEstar from "@/assets/sala-estar.png";
-import internaSala from "@/assets/interna-sala.webp";
-import internaJantar from "@/assets/interna-jantar.webp";
+import casaSala from "@/assets/casa-sala.png";
+import casaJantar from "@/assets/casa-jantar.png";
+import casaCozinha from "@/assets/casa-cozinha.png";
+import casaRede from "@/assets/casa-rede.png";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 export const Gastronomia = () => (
