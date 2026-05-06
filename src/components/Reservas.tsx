@@ -1,21 +1,12 @@
-import { useState } from "react";
-import { Calendar, Wallet, Users, AlertCircle } from "lucide-react";
+import { Calendar, Wallet, Users, AlertCircle, MessageCircle } from "lucide-react";
 import ctaBg from "@/assets/reservas-bg.webp";
 
-const WHATSAPP = "https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA.%20Pode%20me%20passar%20a%20disponibilidade%3F";
+const WHATSAPP_RESERVA =
+  "https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA.%20Pode%20me%20passar%20a%20disponibilidade%3F";
+const WHATSAPP_GRUPO =
+  "https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20um%20grupo%20com%20mais%20de%2025%20pessoas%20e%20gostaria%20de%20conversar%20sobre%20a%20Casa%20Robel%C3%BA.";
 
 export const Reservas = () => {
-  const [form, setForm] = useState({ nome: "", tel: "", inicio: "", fim: "", hospedes: "2" });
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const msg = `Olá! Gostaria de verificar disponibilidade na Casa Robelú.%0A%0ANome: ${form.nome}%0ATelefone: ${form.tel}%0AChegada: ${form.inicio}%0ASaída: ${form.fim}%0AHóspedes: ${form.hospedes}`;
-    window.open(`https://wa.me/5585997640313?text=${msg}`, "_blank");
-  };
-
-  const hospedesNum = parseInt(form.hospedes, 10);
-  const grupoGrande = hospedesNum > 25;
-
   return (
     <section id="reservas" className="relative py-20 sm:py-28 md:py-40 px-5 sm:px-6 overflow-hidden">
       <div className="absolute inset-0">
@@ -30,11 +21,11 @@ export const Reservas = () => {
         </p>
         <h2 className="reveal reveal-delay-1 font-display italic text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-balance">
           Seu próximo refúgio está
-          <br />a uma reserva de distância.
+          <br />a uma mensagem de distância.
         </h2>
         <p className="reveal reveal-delay-2 mt-6 sm:mt-8 font-serif-italic text-lg sm:text-2xl text-off-white/95 max-w-2xl mx-auto leading-snug">
           Disponibilidade limitada para feriados, Réveillon e alta temporada.
-          Reserve com antecedência e garanta sua experiência.
+          Fale conosco direto pelo WhatsApp e garanta sua data.
         </p>
 
         <div className="reveal reveal-delay-3 grid sm:grid-cols-3 gap-5 sm:gap-6 mt-10 sm:mt-14 max-w-4xl mx-auto text-left">
@@ -52,7 +43,11 @@ export const Reservas = () => {
           </div>
           <div className="flex items-start gap-3 text-off-white">
             <Users className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
-            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>Capacidade até 25 pessoas<br /><span className="text-off-white/70">Grupos maiores sob consulta</span></p>
+            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>
+              Capacidade até 25 pessoas
+              <br />
+              <span className="text-off-white/70">Grupos maiores sob consulta</span>
+            </p>
           </div>
         </div>
 
@@ -64,77 +59,34 @@ export const Reservas = () => {
           </p>
         </div>
 
-        <form
-          onSubmit={onSubmit}
-          className="reveal reveal-delay-4 mt-8 sm:mt-10 max-w-3xl mx-auto bg-off-white/5 backdrop-blur-md border border-off-white/20 p-6 sm:p-8 md:p-10 text-left"
-        >
-          <div className="grid sm:grid-cols-2 gap-5">
-            <Field label="Nome completo" value={form.nome} onChange={(v) => setForm({ ...form, nome: v })} required maxLength={100} />
-            <Field label="Telefone / WhatsApp" value={form.tel} onChange={(v) => setForm({ ...form, tel: v })} required maxLength={20} />
-            <Field label="Data de chegada" type="date" value={form.inicio} onChange={(v) => setForm({ ...form, inicio: v })} />
-            <Field label="Data de saída" type="date" value={form.fim} onChange={(v) => setForm({ ...form, fim: v })} />
+        {/* CTAs WhatsApp */}
+        <div className="reveal reveal-delay-4 mt-10 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+          <a
+            href={WHATSAPP_RESERVA}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 sm:px-10 sm:py-5 text-off-white font-medium tracking-wide transition-all duration-300 hover:scale-[1.02] shadow-[0_10px_30px_-6px_rgba(37,211,102,0.55)]"
+            style={{ background: "#25D366", borderRadius: 2, fontSize: "16px" }}
+          >
+            <MessageCircle className="w-5 h-5" strokeWidth={1.8} />
+            Reservar pelo WhatsApp
+            <span aria-hidden>→</span>
+          </a>
+          <a
+            href={WHATSAPP_GRUPO}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-4 text-gold border border-gold/60 hover:bg-gold/10 transition-colors"
+            style={{ borderRadius: 2, fontSize: "15px" }}
+          >
+            Grupos +25 pessoas
+          </a>
+        </div>
 
-            {/* Aviso dentro do form, abaixo das datas */}
-            <div className="sm:col-span-2 flex items-start gap-2 text-gold" style={{ fontSize: "13px", lineHeight: 1.5 }}>
-              <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" strokeWidth={1.4} />
-              <span>Estadia mínima de 2 noites. Reservas de 1 diária não são aceitas.</span>
-            </div>
-
-            <div className="sm:col-span-2">
-              <label className="block uppercase text-off-white/80 mb-2" style={{ fontSize: "13px", letterSpacing: "0.18em", fontWeight: 600 }}>Hóspedes</label>
-              <select
-                value={form.hospedes}
-                onChange={(e) => setForm({ ...form, hospedes: e.target.value })}
-                className="w-full bg-transparent border-b border-off-white/30 py-3 text-off-white focus:border-gold outline-none transition-colors"
-                style={{ fontSize: "16px" }}
-              >
-                {Array.from({ length: 25 }, (_, i) => i + 1).map((n) => (
-                  <option key={n} value={n} className="bg-dark-text">
-                    {n} {n === 1 ? "pessoa" : "pessoas"}
-                  </option>
-                ))}
-                <option value="26" className="bg-dark-text">Mais de 25 pessoas</option>
-              </select>
-              {grupoGrande && (
-                <p className="mt-3 text-gold flex items-center gap-2" style={{ fontSize: "13px" }}>
-                  <AlertCircle className="w-4 h-4" strokeWidth={1.4} />
-                  Para grupos acima de 25 pessoas, entre em contato pelo WhatsApp.
-                </p>
-              )}
-            </div>
-          </div>
-
-          <button type="submit" className="btn-ghost-light mt-8 sm:mt-10 w-full sm:w-auto justify-center">
-            Verificar Disponibilidade <span aria-hidden>→</span>
-          </button>
-        </form>
-
-        <a
-          href={WHATSAPP}
-          target="_blank"
-          rel="noreferrer"
-          className="reveal mt-10 inline-block font-serif-italic italic text-xl text-gold hover:text-off-white transition-colors"
-        >
-          Ou fale diretamente pelo WhatsApp →
-        </a>
+        <p className="reveal mt-8 text-off-white/70 text-sm">
+          Resposta rápida · Atendimento direto com a casa
+        </p>
       </div>
     </section>
   );
 };
-
-const Field = ({
-  label, value, onChange, type = "text", required, maxLength,
-}: { label: string; value: string; onChange: (v: string) => void; type?: string; required?: boolean; maxLength?: number }) => (
-  <div>
-    <label className="block uppercase text-off-white/80 mb-2" style={{ fontSize: "13px", letterSpacing: "0.18em", fontWeight: 600 }}>{label}</label>
-    <input
-      type={type}
-      value={value}
-      required={required}
-      maxLength={maxLength}
-      onChange={(e) => onChange(e.target.value)}
-      className="w-full bg-transparent border-b border-off-white/30 py-3 text-off-white placeholder:text-off-white/30 focus:border-gold outline-none transition-colors"
-      style={{ fontSize: "16px" }}
-    />
-  </div>
-);
