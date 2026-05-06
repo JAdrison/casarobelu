@@ -70,7 +70,7 @@ export const Lazer = () => (
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={viewportOnce}
+        viewport={{ once: true, amount: 0.1 }}
         variants={stagger(0.05, 0.08)}
         className="relative"
       >
