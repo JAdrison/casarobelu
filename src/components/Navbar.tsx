@@ -48,6 +48,7 @@ export const Navbar = () => {
             src={logoRobelu}
             alt="Casa Robelú"
             className={`h-10 sm:h-14 w-auto transition-all duration-500 ${scrolled ? "" : "brightness-0 invert"}`}
+            style={!scrolled ? { filter: "brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.45))" } : undefined}
           />
         </motion.a>
 
