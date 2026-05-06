@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import piscinaPergolado from "@/assets/piscina-pergolado.webp";
-import quadraVolei from "@/assets/quadra-volei.webp";
+import quadraVolei from "@/assets/jardim-capela.png";
 import capela from "@/assets/capela.jpg";
 import capelaInterior from "@/assets/capela-interior.png";
 import { fadeUp, fadeIn, stagger, easeLuxe } from "@/lib/motion";
@@ -64,7 +64,7 @@ export const Lazer = () => (
             aspectRatio: "1/1",
           }}
         >
-          <img src={quadraVolei} alt="Quadra de vôlei" loading="lazy" className="w-full h-full object-cover" />
+          <img src={quadraVolei} alt="Jardim com vista para a capela e ducha externa" loading="lazy" className="w-full h-full object-cover" />
         </div>
       </motion.div>
 
