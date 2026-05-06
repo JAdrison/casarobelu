@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import casaConceitoVideo from "@/assets/casa-conceito.mp4";
 import casaConceitoPoster from "@/assets/hero-aerea.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
+
+const YOUTUBE_ID = "Im7nT6BRryo";
 
 const inclusos = [
   "Até 25 pessoas · 8 quartos",
