@@ -71,8 +71,8 @@ export const CasaInteira = () => {
               allowFullScreen
               className="absolute top-1/2 left-1/2 border-0 pointer-events-none"
               style={{
-                width: "100%",
-                height: "177.78%",
+                width: "142.23%",
+                height: "100%",
                 transform: "translate(-50%, -50%)",
               }}
             />
