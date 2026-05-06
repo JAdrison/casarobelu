@@ -14,9 +14,28 @@
 
 Casa inteira para até 25 hóspedes, com vista 180° para o mar, piscina, quadra de vôlei, capela e privacidade total para grupos, famílias e eventos.
 
-🌐 **Site:** [casarobelu.com.br](https://casarobelu.com.br)
+🌐 **Site:** [casarobelu.lovable.app](https://casarobelu.lovable.app)
 📍 **Localização:** Morro Branco · Beberibe · Ceará
 📱 **Reservas:** [WhatsApp +55 85 99764-0313](https://wa.me/5585997640313)
+
+---
+
+## Preview do site
+
+<p align="center">
+  <img src="docs/screenshots/01-hero-desktop.png" alt="Hero — Casa Robelú em desktop" width="100%" />
+  <br/><em>Hero principal — desktop</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/02-estrutura.png" alt="Seção Lazer & Estrutura" width="100%" />
+  <br/><em>Lazer & Estrutura — piscina, deck, capela</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/03-mobile-hero.png" alt="Hero em mobile (iPhone)" width="320" />
+  <br/><em>Versão mobile (iPhone 12 / 390px)</em>
+</p>
 
 ---
 
