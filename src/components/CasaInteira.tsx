@@ -127,8 +127,10 @@ export const CasaInteira = () => {
         </motion.ul>
         <motion.a
           variants={fadeUp}
-          href="#reservas"
-          className="inline-flex items-center gap-2 uppercase text-terracota hover:text-gold transition-colors"
+          href="https://wa.me/5585997640313?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20a%20Casa%20Robel%C3%BA."
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 uppercase text-terracota hover:text-gold transition-colors min-h-[44px]"
           style={{
             fontFamily: "'Quicksand', sans-serif",
             fontSize: "13px",
