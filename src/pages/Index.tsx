@@ -36,7 +36,7 @@ const Index = () => {
     };
     setMeta(
       "description",
-      "Casa Robelú — refúgio pé na areia em Morro Branco, Beberibe/CE. Até 23 hóspedes, vista 180° para o mar, piscina, vôlei e privacidade total."
+      "Casa Robelú — refúgio pé na areia em Morro Branco, Beberibe/CE. Até 25 hóspedes, vista 180° para o mar, piscina, vôlei e privacidade total."
     );
   }, []);
 

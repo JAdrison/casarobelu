@@ -96,7 +96,7 @@ export const Lazer = () => (
           variants={fadeUp}
           className="text-[17px] sm:text-[18px] leading-[1.7] text-dark-text/90 mb-7"
         >
-          Reúna até 23 pessoas em uma estrutura pensada para grupos: piscina de
+          Reúna até 25 pessoas em uma estrutura pensada para grupos: piscina de
           4×8m sob pergolado, deck com churrasqueira e freezer, quadra com rede de
           vôlei, espreguiçadeiras de frente pro mar e uma capela no jardim.
           Tudo em uma só casa, sem precisar sair.

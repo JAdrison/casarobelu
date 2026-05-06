@@ -1,7 +1,7 @@
 const stats = [
   { n: "40", suf: " anos", label: "de história" },
   { n: "8", suf: "", label: "quartos distribuídos" },
-  { n: "23", suf: "", label: "pessoas por estadia" },
+  { n: "25", suf: "", label: "pessoas por estadia" },
   { n: "180", suf: "°", label: "de vista para o mar" },
 ];
 

@@ -148,7 +148,7 @@ export const Hero = () => {
               show: { opacity: 1, y: 0, transition: { duration: 1, ease: easeLuxe } },
             }}
           >
-            Pé na areia, vista 180° e estrutura completa para até 23 pessoas.
+            Pé na areia, vista 180° e estrutura completa para até 25 pessoas.
             Um refúgio em Morro Branco para quem não aceita o comum.
           </motion.p>
 
