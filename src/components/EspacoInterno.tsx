@@ -63,7 +63,7 @@ export const EspacoInterno = () => (
           imageBack={sala}
           imageFront={jantar}
           altBack="Sala de estar com sofás amplos"
-          altFront="Sala de jantar para 10 pessoas"
+          altFront="Renato's Bar com churrasqueira e mesa redonda para 8"
         />
       </motion.div>
     </div>
