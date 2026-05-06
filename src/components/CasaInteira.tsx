@@ -17,16 +17,11 @@ const inclusos = [
 ];
 
 export const CasaInteira = () => {
-  const ref = useRef<HTMLVideoElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    // Respeita data-saver e usuários com reduce-motion
-    const dataSaver = (navigator as any).connection?.saveData;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (dataSaver || reduceMotion) return;
-
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
@@ -62,18 +57,27 @@ export const CasaInteira = () => {
           aspectRatio: "4/5",
         }}
       >
-        <video
-          ref={ref}
-          src={shouldLoad ? casaConceitoVideo : undefined}
-          poster={casaConceitoPoster}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          aria-label="Vídeo da Casa Robelú"
-          className="w-full h-full object-cover"
-        />
+        <div ref={ref} className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${casaConceitoPoster})` }}>
+          {shouldLoad && (
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_ID}&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3`}
+              title="Vídeo da Casa Robelú"
+              loading="lazy"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0 pointer-events-none"
+              style={{
+                width: "177.78vh",
+                height: "56.25vw",
+                minWidth: "100%",
+                minHeight: "100%",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            />
+          )}
+        </div>
       </motion.figure>
 
       <motion.div
