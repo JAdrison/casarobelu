@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import piscinaPergolado from "@/assets/piscina-pergolado.webp";
+import casaConceitoVideo from "@/assets/casa-conceito.mp4";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const inclusos = [
@@ -31,11 +31,14 @@ export const CasaInteira = () => (
           aspectRatio: "4/5",
         }}
       >
-        <img
-          src={piscinaPergolado}
-          alt="Piscina e área externa da Casa Robelú"
-          loading="lazy"
-          decoding="async"
+        <video
+          src={casaConceitoVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Vídeo da Casa Robelú"
           className="w-full h-full object-cover"
         />
       </motion.figure>
