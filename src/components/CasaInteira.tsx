@@ -143,4 +143,5 @@ export const CasaInteira = () => {
       </motion.div>
     </div>
   </section>
-);
+  );
+};
