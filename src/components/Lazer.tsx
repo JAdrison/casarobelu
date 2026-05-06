@@ -36,15 +36,15 @@ export const Lazer = () => (
         className="relative"
       >
         <img
-          src={piscinaPergolado}
-          alt="Piscina sob pergolado com vista para o mar"
+          src={capela}
+          alt="Capela de oração no jardim da Casa Robelú"
           loading="lazy"
           decoding="async"
           className="w-full object-cover"
-          style={{ aspectRatio: "5/4", borderRadius: 2, boxShadow: "0 30px 60px -20px rgba(0,0,0,0.3)" }}
+          style={{ aspectRatio: "4/5", borderRadius: 2, boxShadow: "0 30px 60px -20px rgba(0,0,0,0.3)" }}
         />
         <div
-          className="hidden md:block absolute -bottom-8 -right-8 w-[40%] overflow-hidden"
+          className="hidden md:block absolute -bottom-8 -right-8 w-[42%] overflow-hidden"
           style={{
             border: "8px solid #FAF7F2",
             borderRadius: 2,
@@ -52,7 +52,7 @@ export const Lazer = () => (
             aspectRatio: "1/1",
           }}
         >
-          <img src={quadraVolei} alt="Quadra de vôlei com piscina e capela" loading="lazy" className="w-full h-full object-cover" />
+          <img src={piscinaPergolado} alt="Piscina sob pergolado com vista para o mar" loading="lazy" className="w-full h-full object-cover" />
         </div>
         <div
           className="hidden md:block absolute -top-6 -left-6 w-[28%] overflow-hidden"
@@ -63,7 +63,7 @@ export const Lazer = () => (
             aspectRatio: "1/1",
           }}
         >
-          <img src={capela} alt="Capela de oração" loading="lazy" className="w-full h-full object-cover" />
+          <img src={quadraVolei} alt="Quadra de vôlei" loading="lazy" className="w-full h-full object-cover" />
         </div>
       </motion.div>
 
