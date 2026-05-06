@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import quarto1 from "@/assets/quarto-novo-1.png";
 import quarto2 from "@/assets/quarto-novo-2.png";
 import quarto3 from "@/assets/quarto-novo-3.png";
@@ -30,13 +31,22 @@ const RomanNumeral = ({ n }: { n: string }) => (
 
 const QuartoSlideshow = () => {
   const [i, setI] = useState(0);
+  const [paused, setPaused] = useState(false);
+
   useEffect(() => {
+    if (paused) return;
     const id = setInterval(() => setI((p) => (p + 1) % slides.length), 4500);
     return () => clearInterval(id);
-  }, []);
+  }, [paused]);
+
+  const go = (dir: 1 | -1) => {
+    setPaused(true);
+    setI((p) => (p + dir + slides.length) % slides.length);
+  };
+
   return (
     <div
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden group"
       style={{
         aspectRatio: "5/4",
         borderRadius: 2,
@@ -54,12 +64,38 @@ const QuartoSlideshow = () => {
           }`}
         />
       ))}
+
+      <button
+        type="button"
+        onClick={() => go(-1)}
+        aria-label="Foto anterior"
+        className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-off-white/85 hover:bg-off-white text-dark-text shadow-lg backdrop-blur-sm transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-105"
+        style={{ borderRadius: 2 }}
+      >
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
+      </button>
+      <button
+        type="button"
+        onClick={() => go(1)}
+        aria-label="Próxima foto"
+        className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-off-white/85 hover:bg-off-white text-dark-text shadow-lg backdrop-blur-sm transition-all duration-300 opacity-80 hover:opacity-100 hover:scale-105"
+        style={{ borderRadius: 2 }}
+      >
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
+      </button>
+
       <div className="absolute bottom-4 right-4 flex gap-1.5 z-10">
         {slides.map((_, idx) => (
-          <span
+          <button
             key={idx}
+            type="button"
+            aria-label={`Ir para foto ${idx + 1}`}
+            onClick={() => {
+              setPaused(true);
+              setI(idx);
+            }}
             className={`h-1 rounded-full transition-all duration-500 ${
-              idx === i ? "w-6 bg-off-white" : "w-1.5 bg-off-white/50"
+              idx === i ? "w-6 bg-off-white" : "w-1.5 bg-off-white/50 hover:bg-off-white/80"
             }`}
           />
         ))}
