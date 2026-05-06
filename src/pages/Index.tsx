@@ -11,7 +11,6 @@ import { Gastronomia } from "@/components/Gastronomia";
 import { Passeios } from "@/components/Passeios";
 import { Regiao } from "@/components/Regiao";
 import { Galeria } from "@/components/Galeria";
-import { Eventos } from "@/components/Eventos";
 import { Hospitalidade } from "@/components/Hospitalidade";
 import { Depoimentos } from "@/components/Depoimentos";
 import { Stats } from "@/components/Stats";
@@ -54,7 +53,6 @@ const Index = () => {
       <Passeios />
       <Regiao />
       <Galeria />
-      <Eventos />
       <Hospitalidade />
       <Depoimentos />
       <Stats />
