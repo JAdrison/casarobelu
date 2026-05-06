@@ -53,7 +53,7 @@ export const Lazer = () => (
             aspectRatio: "1/1",
           }}
         >
-          <img src={piscinaPergolado} alt="Piscina sob pergolado com vista para o mar" loading="lazy" className="w-full h-full object-cover" />
+          <img src={capelaInterior} alt="Interior da capela com crucifixo e bancos de madeira" loading="lazy" className="w-full h-full object-cover" />
         </div>
         <div
           className="hidden md:block absolute -top-6 -left-6 w-[28%] overflow-hidden"
