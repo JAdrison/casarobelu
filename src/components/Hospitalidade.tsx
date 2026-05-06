@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
+import hospitalidadeVinho from "@/assets/hospitalidade-vinho.png";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 export const Hospitalidade = () => (
@@ -8,22 +8,26 @@ export const Hospitalidade = () => (
     className="bg-champagne py-24 md:py-36 px-5 sm:px-6 relative overflow-hidden"
   >
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-      <motion.div
+      <motion.figure
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={viewportOnce}
         transition={{ duration: 1.1, ease: easeLuxe }}
-        className="relative"
+        className="relative overflow-hidden"
         style={{
           boxShadow: "0 40px 80px -24px rgba(26,20,16,0.4)",
           borderRadius: 2,
+          aspectRatio: "4/5",
         }}
       >
-        <PhotoPlaceholder
-          description="Foto da equipe da casa — caseiro, cozinheira ou camareiras recebendo / servindo"
-          aspectRatio="4/5"
+        <img
+          src={hospitalidadeVinho}
+          alt="Vinho e taças servidos na Casa Robelú — hospitalidade que recebe bem"
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover"
         />
-      </motion.div>
+      </motion.figure>
 
       <motion.div
         initial="hidden"
