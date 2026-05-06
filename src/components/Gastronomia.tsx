@@ -67,60 +67,30 @@ export const Gastronomia = () => (
         variants={stagger(0.08, 0.12)}
         className="grid grid-cols-2 gap-4 sm:gap-5"
       >
-        <motion.figure
-          variants={fadeUp}
-          className="overflow-hidden"
-          style={{
-            aspectRatio: "1/1",
-            borderRadius: 2,
-            boxShadow: "0 20px 40px -16px rgba(26,20,16,0.3)",
-          }}
-        >
-          <img
-            src={salaEstar}
-            alt="Sala de estar com sofás e poltronas em madeira maciça"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </motion.figure>
-        <motion.figure
-          variants={fadeUp}
-          className="overflow-hidden"
-          style={{
-            aspectRatio: "1/1",
-            borderRadius: 2,
-            boxShadow: "0 20px 40px -16px rgba(26,20,16,0.3)",
-          }}
-        >
-          <img
-            src={internaJantar}
-            alt="Mesa de jantar para 10 pessoas"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </motion.figure>
-        <motion.figure
-          variants={fadeUp}
-          className="overflow-hidden"
-          style={{
-            aspectRatio: "1/1",
-            borderRadius: 2,
-            boxShadow: "0 20px 40px -16px rgba(26,20,16,0.3)",
-          }}
-        >
-          <img
-            src={internaSala}
-            alt="Outro ângulo da sala de estar"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </motion.figure>
-        <motion.div variants={fadeUp}>
-          <PhotoPlaceholder
-            description="Cozinha equipada da casa"
-            aspectRatio="1/1"
-          />
-        </motion.div>
+        {[
+          { src: casaSala, alt: "Sala de estar com sofás e poltronas em madeira maciça" },
+          { src: casaJantar, alt: "Mesa de jantar para todos" },
+          { src: casaCozinha, alt: "Cozinha equipada da casa" },
+          { src: casaRede, alt: "Varanda com rede e vista para o mar" },
+        ].map((img) => (
+          <motion.figure
+            key={img.src}
+            variants={fadeUp}
+            className="overflow-hidden"
+            style={{
+              aspectRatio: "1/1",
+              borderRadius: 2,
+              boxShadow: "0 20px 40px -16px rgba(26,20,16,0.3)",
+            }}
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </motion.figure>
+        ))}
       </motion.div>
     </div>
   </section>
