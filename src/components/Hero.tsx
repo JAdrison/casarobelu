@@ -160,12 +160,15 @@ export const Hero = () => {
             }}
           >
             <a
-              href="#reservas"
-              className="group relative inline-flex items-center justify-center gap-3 font-sans-soft uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden"
+              href="https://wa.me/5585997640313?text=Ol%C3%A1!%20Tenho%20interesse%20em%20reservar%20a%20Casa%20Robel%C3%BA.%20Pode%20me%20passar%20a%20disponibilidade%3F"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Reservar via WhatsApp"
+              className="group relative inline-flex items-center justify-center gap-3 font-sans-soft uppercase transition-all duration-500 hover:-translate-y-0.5 overflow-hidden min-h-[52px]"
               style={{
                 background: "#A0522D",
                 color: "#FAF7F2",
-                padding: "18px 40px",
+                padding: "16px 32px",
                 fontSize: "14px",
                 letterSpacing: "0.14em",
                 fontWeight: 600,
@@ -173,7 +176,7 @@ export const Hero = () => {
                 boxShadow: "0 14px 36px -14px rgba(160,82,45,0.6)",
               }}
             >
-              <span className="relative z-10">Verificar Disponibilidade</span>
+              <span className="relative z-10">Reservar via WhatsApp</span>
               <span aria-hidden className="relative z-10 transition-transform duration-500 group-hover:translate-x-1">→</span>
               <span
                 aria-hidden
@@ -186,11 +189,11 @@ export const Hero = () => {
             </a>
             <a
               href="#casa"
-              className="inline-flex items-center justify-center gap-3 font-sans-soft uppercase transition-all duration-500 hover:bg-white/10 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-3 font-sans-soft uppercase transition-all duration-500 hover:bg-white/10 hover:-translate-y-0.5 min-h-[52px]"
               style={{
                 background: "transparent",
                 color: "#FAF7F2",
-                padding: "18px 40px",
+                padding: "16px 32px",
                 fontSize: "14px",
                 letterSpacing: "0.14em",
                 fontWeight: 600,
