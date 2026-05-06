@@ -36,27 +36,6 @@ const passeios: Passeio[] = [
     meta: "30 min · 25 km da casa",
     bg: parapente,
   },
-  {
-    label: "Expedição",
-    title: "Trilha das Falésias",
-    desc: "Caminhada guiada até as piscinas naturais e mirantes mais altos da costa.",
-    meta: "Meio período · guia local",
-    placeholder: "Trilha nas falésias / piscinas naturais entre as rochas",
-  },
-  {
-    label: "Cultura & Vida",
-    title: "Canoa Quebrada",
-    desc: "Broadway de Canoa, kitesurf, restaurantes e o pôr do sol no mirante.",
-    meta: "Tarde e noite · 25 km",
-    placeholder: "Vista do letreiro de Canoa Quebrada / Broadway iluminada",
-  },
-  {
-    label: "Águas",
-    title: "Lagoa do Uruaú & Praia das Fontes",
-    desc: "Catamarã, tirolesa sobre a lagoa e fontes naturais de água doce na areia.",
-    meta: "Dia inteiro · 20 km",
-    placeholder: "Lagoa do Uruaú com tirolesa ou Praia das Fontes",
-  },
 ];
 
 export const Passeios = () => (
