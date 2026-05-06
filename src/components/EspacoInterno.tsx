@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import sala from "@/assets/sala-estar.png";
-import jantar from "@/assets/interna-jantar.webp";
+import jantar from "@/assets/renatos-bar.png";
 import { PhotoStack } from "./PhotoStack";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
@@ -63,7 +63,7 @@ export const EspacoInterno = () => (
           imageBack={sala}
           imageFront={jantar}
           altBack="Sala de estar com sofás amplos"
-          altFront="Sala de jantar para 10 pessoas"
+          altFront="Renato's Bar com churrasqueira e mesa redonda para 8"
         />
       </motion.div>
     </div>
