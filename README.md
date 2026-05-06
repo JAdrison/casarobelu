@@ -1,12 +1,39 @@
-# Casa Robelú
+<p align="center">
+  <img src="src/assets/logo-robelu.png" alt="Casa Robelú" width="180" />
+</p>
 
-Landing page oficial da **Casa Robelú** — refúgio pé na areia nas falésias de Morro Branco, Beberibe/CE.
+<h1 align="center">Casa Robelú</h1>
+
+<p align="center">
+  <em>Refúgio pé na areia nas falésias de Morro Branco · Beberibe/CE</em>
+</p>
+
+<p align="center">
+  <img src="src/assets/hero-aerea.png" alt="Vista aérea da Casa Robelú" width="100%" />
+</p>
 
 Casa inteira para até 25 hóspedes, com vista 180° para o mar, piscina, quadra de vôlei, capela e privacidade total para grupos, famílias e eventos.
 
 🌐 **Site:** [casarobelu.com.br](https://casarobelu.com.br)
 📍 **Localização:** Morro Branco · Beberibe · Ceará
 📱 **Reservas:** [WhatsApp +55 85 99764-0313](https://wa.me/5585997640313)
+
+---
+
+## Galeria
+
+<table>
+  <tr>
+    <td><img src="src/assets/piscina-pergolado.webp" alt="Piscina com pergolado" /></td>
+    <td><img src="src/assets/deck-mar-1.png" alt="Deck com vista para o mar" /></td>
+    <td><img src="src/assets/capela.jpg" alt="Capela da casa" /></td>
+  </tr>
+  <tr>
+    <td><img src="src/assets/casa-sala.png" alt="Sala de estar" /></td>
+    <td><img src="src/assets/casa-jantar.png" alt="Mesa de jantar" /></td>
+    <td><img src="src/assets/casa-cozinha.png" alt="Cozinha equipada" /></td>
+  </tr>
+</table>
 
 ---
 
