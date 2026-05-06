@@ -56,7 +56,7 @@ export const Apresentacao = () => (
           variants={fadeUp}
           className="text-[17px] sm:text-[18px] leading-[1.75] text-dark-text/85"
         >
-          Aqui, a casa é toda sua. Até 23 hóspedes, 8 quartos, piscina, quadra
+          Aqui, a casa é toda sua. Até 25 hóspedes, 8 quartos, piscina, quadra
           de vôlei e churrasqueira — tudo para receber família e amigos com a
           privacidade de um lar e o cuidado de um refúgio.
         </motion.p>

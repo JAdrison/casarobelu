@@ -52,7 +52,7 @@ export const Reservas = () => {
           </div>
           <div className="flex items-start gap-3 text-off-white">
             <Users className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
-            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>Capacidade até 23 pessoas<br /><span className="text-off-white/70">Grupos maiores sob consulta</span></p>
+            <p style={{ fontSize: "15px", lineHeight: 1.55 }}>Capacidade até 25 pessoas<br /><span className="text-off-white/70">Grupos maiores sob consulta</span></p>
           </div>
         </div>
 
@@ -93,12 +93,12 @@ export const Reservas = () => {
                     {n} {n === 1 ? "pessoa" : "pessoas"}
                   </option>
                 ))}
-                <option value="24" className="bg-dark-text">Mais de 23 pessoas</option>
+                <option value="24" className="bg-dark-text">Mais de 25 pessoas</option>
               </select>
               {grupoGrande && (
                 <p className="mt-3 text-gold flex items-center gap-2" style={{ fontSize: "13px" }}>
                   <AlertCircle className="w-4 h-4" strokeWidth={1.4} />
-                  Para grupos acima de 23 pessoas, entre em contato pelo WhatsApp.
+                  Para grupos acima de 25 pessoas, entre em contato pelo WhatsApp.
                 </p>
               )}
             </div>

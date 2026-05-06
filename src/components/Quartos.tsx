@@ -92,7 +92,7 @@ export const Quartos = () => (
           style={{ fontWeight: 400, letterSpacing: "-0.01em" }}
         >
           8 quartos,{" "}
-          <span className="italic" style={{ color: "#A0522D" }}>23 pessoas, zero concessão.</span>
+          <span className="italic" style={{ color: "#A0522D" }}>25 pessoas, zero concessão.</span>
         </motion.h2>
         <motion.div
           variants={{

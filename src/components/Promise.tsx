@@ -6,7 +6,7 @@ import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 const pillars = [
   { icon: Lock, title: "Privacidade Total", text: "Acesso exclusivo. Sem vizinhos, sem compromissos." },
   { icon: Waves, title: "Vista 180° para o Mar", text: "Falésias, coqueiros e horizonte infinito." },
-  { icon: Users, title: "Para Grupos de Até 23", text: "Capacidade para até 23 hóspedes com conforto e estrutura completa." },
+  { icon: Users, title: "Para Grupos de Até 25", text: "Capacidade para até 25 hóspedes com conforto e estrutura completa." },
 ];
 
 export const Promise = () => (

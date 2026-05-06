@@ -3,7 +3,7 @@ import piscinaPergolado from "@/assets/piscina-pergolado.webp";
 import { fadeUp, stagger, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const inclusos = [
-  "Até 23 pessoas · 8 quartos",
+  "Até 25 pessoas · 8 quartos",
   "Piscina 4×8m com pergolado de madeira",
   "Quadra de vôlei e capela própria",
   "Deck com churrasqueira à beira-mar",

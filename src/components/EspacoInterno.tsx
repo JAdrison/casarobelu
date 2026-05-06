@@ -47,7 +47,7 @@ export const EspacoInterno = () => (
           className="text-[17px] sm:text-[18px] leading-[1.7] text-dark-text/90"
         >
           Sala ampla com sofás para todos, mesa de jantar para 10, cozinha equipada
-          e enxoval completo. Receber 23 pessoas aqui é simples — a casa foi feita
+          e enxoval completo. Receber 25 pessoas aqui é simples — a casa foi feita
           para isso há quase 40 anos.
         </motion.p>
       </motion.div>
