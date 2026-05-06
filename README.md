@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="src/assets/hero-aerea.png" alt="Vista aérea da Casa Robelú" width="100%" />
+  <img src="src/assets/hero-aerea.webp" alt="Vista aérea da Casa Robelú" width="100%" />
 </p>
 
 Casa inteira para até 25 hóspedes, com vista 180° para o mar, piscina, quadra de vôlei, capela e privacidade total para grupos, famílias e eventos.
@@ -25,13 +25,13 @@ Casa inteira para até 25 hóspedes, com vista 180° para o mar, piscina, quadra
 <table>
   <tr>
     <td><img src="src/assets/piscina-pergolado.webp" alt="Piscina com pergolado" /></td>
-    <td><img src="src/assets/deck-mar-1.png" alt="Deck com vista para o mar" /></td>
+    <td><img src="src/assets/deck-mar-1.webp" alt="Deck com vista para o mar" /></td>
     <td><img src="src/assets/capela.jpg" alt="Capela da casa" /></td>
   </tr>
   <tr>
-    <td><img src="src/assets/casa-sala.png" alt="Sala de estar" /></td>
-    <td><img src="src/assets/casa-jantar.png" alt="Mesa de jantar" /></td>
-    <td><img src="src/assets/casa-cozinha.png" alt="Cozinha equipada" /></td>
+    <td><img src="src/assets/casa-sala.webp" alt="Sala de estar" /></td>
+    <td><img src="src/assets/casa-jantar.webp" alt="Mesa de jantar" /></td>
+    <td><img src="src/assets/casa-cozinha.webp" alt="Cozinha equipada" /></td>
   </tr>
 </table>
 
