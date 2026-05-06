@@ -1,103 +1,135 @@
-## Diagnóstico
 
-Encontrei vários focos de **baixa legibilidade**:
+# Reestrutura da landing — referência Vila Flor
 
-1. **Eyebrows** (`text-xs` = 12px) com `tracking-[0.3em]` — letras minúsculas e muito espaçadas; viram ruído.
-2. **Body copy** em `text-dark-text/75` ou `#6B5E52` — contraste fraco em fundo bege; cansa os olhos.
-3. **Botões** em `text-[12px]` com `tracking-[0.2em]` — quase ilegíveis no mobile.
-4. **Captions de cards** (`text-[10px]`, `text-[11px]`) na Galeria, ExternoShowcase, Hero badge, Servicos, Footer — pequenas demais.
-5. **Reservas** (seção escura): labels `text-[11px]` e infos em `text-sm` ficam apertadas.
-6. **Footer**: `text-[10px]` — não dá pra ler.
-7. **Promise pillars**: título `0.78rem` (≈12.5px) com tracking 0.18em — muito pequeno.
-8. **Lazer amenities**: `text-[15px]` ok, mas `text-dark-text/80` fraco.
-9. **`body { font-weight: 300 }`** — Quicksand 300 em 14-16px fica fino e cinza.
+Objetivo: replicar a hierarquia, o ritmo visual e a harmonia tipográfica da Vila Flor, adaptando ao conteúdo real da Casa Robelú (casa inteira, até 23 hóspedes, Morro Branco/CE). Onde ainda não houver foto, deixo um placeholder elegante com a descrição exata do que você precisa enviar.
 
-## Princípios da reestrutura
+## Nova ordem das seções (do topo para o rodapé)
 
-- **Mínimo legível**: nunca abaixo de **13px**, e só em microelementos (créditos no Footer, badges).
-- **Body padrão**: **17px** desktop / 16px mobile, peso **400** (em vez de 300).
-- **Eyebrows**: subir de 12px → **13px**, tracking 0.3em → **0.22em**, peso **600**.
-- **Contraste**: trocar `text-dark-text/75` por `/85`, e `#6B5E52` por **`#3D2F24`** (mais escuro, ainda quente).
-- **Botões**: subir para **14px** (sm:15px), tracking **0.14em**, peso **600**.
-- **Hierarquia tipográfica clara** — definir escala única e aplicar:
-  ```
-  display-xl  : clamp(2.8rem, 6vw, 5rem)     — Hero h1
-  display-lg  : clamp(2.4rem, 4.5vw, 3.6rem) — h2 das seções
-  display-md  : clamp(1.8rem, 3vw, 2.4rem)   — h3 grandes
-  body-lg     : 18px / 1.75 — parágrafos hero/promise
-  body        : 17px / 1.7  — parágrafos padrão  
-  body-sm     : 15px / 1.6  — listas, captions grandes
-  micro       : 13px / tracking 0.2em — eyebrows, créditos
-  ```
+```
+1.  Navbar (logo Robelú)
+2.  Hero                       — "Bem-vindo à Casa Robelú"
+3.  Apresentação               — Texto + 3 fotos da casa (substitui ExternoShowcase)
+4.  Conceito "Casa Inteira"    — O que é alugar a Robelú (substitui Promise)
+5.  Pé na Areia / Localização  — manter (PeNaAreia)
+6.  Lazer & Estrutura          — manter (Lazer + EspacoInterno fundidos)
+7.  Quartos / Acomodações      — manter (Quartos)
+8.  Gastronomia                — bloco textual + 4 fotos (sem tabela de preços)
+9.  Passeios & Experiências    — NOVA seção forte (buggy, parapente, falésias…)
+10. A Região (Morro Branco)    — manter (Regiao)
+11. Galeria                    — manter
+12. Eventos                    — manter
+13. Hospitalidade / Equipe     — NOVA (placeholder de foto + texto)
+14. Depoimentos                — manter
+15. Stats                      — manter
+16. Reservas / Orçamento       — manter (Reservas)
+17. Footer
+```
 
-## Mudanças (escopo enxuto)
+Removidos do fluxo principal: `Servicos` (vai virar bullets dentro de "Conceito Casa Inteira" e "Hospitalidade").
 
-### 1) `src/index.css` — sistema de tipografia
-- `body`: `font-weight: 400` (era 300), `font-size: 17px`, `line-height: 1.65`, `letter-spacing: 0.005em`.
-- Mobile: `@media (max-width: 640px) { body { font-size: 16px } }`.
-- `.eyebrow`: `font-size: 13px`, `tracking: 0.22em`, `font-weight: 600`, cor `hsl(var(--terracota))`.
-- Adicionar utilitários: `.text-body-lg` (18px/1.75), `.text-body` (17px/1.7), `.text-body-sm` (15px/1.6), `.text-micro` (13px/tracking 0.2em uppercase).
-- `.btn-hero`, `.btn-ghost-light`: `text-sm sm:text-[15px]`, `tracking-[0.14em]`, `font-weight: 600`.
-- `--muted-foreground`: escurecer de `24 10% 35%` → **`24 15% 22%`** (melhor contraste em bege).
+---
 
-### 2) `src/components/Hero.tsx`
-- Eyebrow "Morro Branco · Ceará": 10/11px → **13px**, tracking 0.32em → **0.22em**, peso 600.
-- Subtítulo: `text-base sm:text-lg md:text-xl` → **`text-lg sm:text-xl md:text-2xl`**, opacidade 0.85 → **0.95**.
-- Botões: 12px → **14px sm:15px**, tracking 0.18em → **0.14em**, peso 600, padding maior.
-- Badge "Desde 1986": 10/12px → **12/14px**.
+## Mudanças por seção
 
-### 3) `src/components/Promise.tsx`
-- Parágrafo principal: 1.05rem → **1.15rem**, cor `#6B5E52` → **`#3D2F24`**, line-height 1.85 → **1.7**.
-- Pillars title: 0.78rem → **0.95rem**, tracking 0.18em → **0.14em**.
-- Pillars text: 1rem → **1.05rem**, cor `#6B5E52` → **`#3D2F24`**.
-- Linha "Estadia mínima…": 11/12px → **13px**, peso 500.
+### 3. Apresentação (nova — substitui o atual `ExternoShowcase` como primeira dobra após o hero)
+- Layout: texto à esquerda + 2-3 fotos à direita (estilo Vila Flor "Vila Flor Casa de Praia e Studios").
+- Eyebrow: "SOBRE A CASA"
+- Título: "Casa Robelú · Refúgio nas falésias de Morro Branco"
+- Texto base (3 parágrafos curtos) sobre: pé na areia, vista 180°, casa inteira para grupos.
+- Fotos: reaproveita `gramado-mar`, `virgem-mar`, `piscina-pergolado` (já existem).
 
-### 4) `src/components/PeNaAreia.tsx`, `Lazer.tsx`, `EspacoInterno.tsx`
-- H2: já bom (clamp); manter.
-- Parágrafos: `text-[17px]` `leading-[1.9]` → **`text-[17px] sm:text-[18px]`** `leading-[1.7]`, opacidade 0.75 → **0.9**.
-- Lazer amenities: 15px → **16px**, opacidade 0.8 → **0.92**.
-- "Ver Galeria" link: 12px → **13px**, tracking 0.2em → **0.16em**.
+### 4. Conceito "Casa Inteira" (substitui o atual `Promise`)
+- Layout: 1 foto grande à esquerda + texto + lista de inclusos à direita (espelha o card "Casa Principal" da Vila Flor, mas como bloco único).
+- Eyebrow: "O CONCEITO"
+- Título: "A casa é toda sua."
+- Bullets de inclusos (vindos do atual `Servicos`):
+  - Até 23 pessoas · 8 quartos
+  - Piscina 4×8m com pergolado
+  - Quadra de vôlei e capela
+  - Deck com churrasqueira
+  - Pé na areia · vista 180°
+  - Enxoval completo incluso
+  - Wi-Fi, ar-condicionado nas suítes
+  - Estacionamento privativo
+- CTA: "Solicitar orçamento"
 
-### 5) `src/components/ExternoShowcase.tsx`
-- Label do card: 10/11px → **12/13px**, tracking 0.28em → **0.2em**, peso 600.
-- Descrição: `text-sm sm:text-base` → **`text-base sm:text-lg`**, opacidade 0.9 → **1**.
+### 8. Gastronomia (NOVA)
+- Layout: texto à esquerda + grid 2×2 de fotos à direita (espelha Vila Flor sem a tabela de preços).
+- Eyebrow: "GASTRONOMIA"
+- Título: "Sabores do Nordeste à mesa"
+- Texto: frutos do mar frescos, culinária local, churrasco no deck, drinks ao pôr do sol.
+- Sem tabela de preços (conforme decidido).
+- **Placeholders necessários (você me envia):**
+  1. Foto de prato com frutos do mar
+  2. Foto da mesa posta / café da manhã
+  3. Foto do churrasco no deck
+  4. Foto de drink / coco ao pôr do sol
 
-### 6) `src/components/Galeria.tsx`
-- Numeração: 10px → **12px**, tracking 0.28em → **0.2em**.
-- Label: `text-base` → **`text-lg`**.
+### 9. Passeios & Experiências (NOVA — substitui a tabela de planos)
+- Esta é a seção que você pediu para destacar.
+- Layout: header centralizado + grid 2×3 (6 cards) com foto de fundo + label + título + descrição curta + duração/distância.
+- Eyebrow: "O QUE FAZER NA REGIÃO"
+- Título: "Aventura, natureza e cultura à porta da casa"
+- Cards previstos:
+  1. **Falésias de Morro Branco** — trilha pelas formações coloridas (foto: já existe `exp-falesias.jpg`)
+  2. **Passeio de Buggy** — dunas, lagoas e praias desertas (foto: já existe `exp-buggy.jpg`)
+  3. **Voo de Parapente** — decolagem em Canoa Quebrada (foto: já existe `parapente.webp`)
+  4. **Expedição nas Falésias** — caminhada guiada com banho nas piscinas naturais — *placeholder de foto*
+  5. **Praia de Canoa Quebrada** — vida noturna, broadway, kitesurf — *placeholder de foto*
+  6. **Lagoa do Uruaú / Praia das Fontes** — passeio de catamarã e tirolesa — *placeholder de foto*
+- **Placeholders necessários:** 3 fotos (expedição falésias, Canoa Quebrada, Lagoa do Uruaú).
 
-### 7) `src/components/Servicos.tsx`
-- Título item: 11/12px → **13/14px**, peso 600.
-- Descrição: 13/14px → **15/16px**, opacidade subir.
+### 13. Hospitalidade / Nossa Equipe (NOVA)
+- Layout: foto à esquerda (placeholder) + texto à direita (espelha Vila Flor "Hospitalidade com rosto, voz e história").
+- Eyebrow: "NOSSA EQUIPE"
+- Título: "Hospitalidade com rosto, voz e história."
+- Texto: equipe local de Morro Branco — caseiro, cozinheira, camareiras — que cuidam da casa e dos hóspedes; o luxo no calor humano.
+- **Placeholder necessário:** 1 foto da equipe (ou da cozinheira servindo / caseiro recebendo).
 
-### 8) `src/components/Eventos.tsx`, `Experiencias.tsx`
-- Botões/links: 12px → **14px**, tracking 0.2em → **0.14em**.
-- Card text Experiencias: já `text-base sm:text-lg`, manter; eyebrow `text-[11px]` → **13px**.
+### Refinamentos transversais (harmonia visual Vila Flor)
+- Espaçamento vertical entre seções padronizado em `py-24 md:py-36`.
+- Alternância rigorosa de fundos: `off-white` → `champagne` → `off-white` → `dark-text` (gastronomia/experiências em fundo escuro para criar peso).
+- Eyebrows sempre com ornamento `<span class="ornament" />` para coesão.
+- Divisor de 56px dourado centralizado abaixo de cada eyebrow nas seções centradas.
+- Títulos limitados a 2 linhas em desktop, segunda linha em itálico cor terracota — padrão já estabelecido.
 
-### 9) `src/components/Reservas.tsx`
-- Labels `text-[11px]` → **13px**, tracking 0.25em → **0.2em**.
-- Infos `text-sm` → **`text-[15px]`**, opacidade subir (off-white/60 → /85).
-- Hint `text-xs` → **13px**.
+---
 
-### 10) `src/components/Depoimentos.tsx`
-- Quote: `text-base sm:text-lg md:text-xl` → **`text-lg sm:text-xl md:text-2xl`**, leading subir.
-- Nome: 13px → **14px**, tracking 0.2em → **0.16em**.
-- "via Google" 11px → **12px**.
+## Componente de placeholder de foto
 
-### 11) `src/components/Footer.tsx`
-- Créditos: 10/12px → **12/13px**, tracking 0.18em → **0.14em**.
-- `text-sm` → **`text-[15px]`**, opacidade subir.
+Para todas as fotos pendentes, criar um componente reutilizável `PhotoPlaceholder` que renderiza:
+- Caixa com `aspect-ratio` correto, fundo `champagne` com textura sutil.
+- Ícone de câmera centralizado.
+- Texto pequeno: "Foto pendente — [descrição]".
+- Borda tracejada terracota leve.
 
-### 12) `src/components/Stats.tsx`
-- Label: 12px → **13px**, opacidade 0.8 → **0.95**.
+Assim a página fica visualmente completa enquanto você me envia as fotos. Quando enviar, eu só substituo a importação.
 
-## O que NÃO muda
+---
 
-- Paleta de cores semântica (terracota, gold, off-white, champagne) — apenas um ajuste em `--muted-foreground`.
-- Famílias de fonte (Playfair Display, Cormorant Garamond, Quicksand) — combinação já funciona.
-- Estrutura de seções, animações, layout, imagens.
-- Tamanhos dos H1/H2 grandes — já estão na escala certa via `clamp()`.
+## Detalhes técnicos
 
-## Resultado esperado
+- **Novos arquivos:**
+  - `src/components/Apresentacao.tsx`
+  - `src/components/CasaInteira.tsx` (substitui visualmente `Promise`)
+  - `src/components/Gastronomia.tsx`
+  - `src/components/Passeios.tsx`
+  - `src/components/Hospitalidade.tsx`
+  - `src/components/PhotoPlaceholder.tsx`
+- **Editados:**
+  - `src/pages/Index.tsx` — nova ordem de imports e composição
+  - `src/components/Promise.tsx` — descontinuado (removido do Index)
+  - `src/components/ExternoShowcase.tsx` — descontinuado (substituído por `Apresentacao`)
+  - `src/components/Servicos.tsx` — descontinuado (conteúdo migra para `CasaInteira`)
+- **Reaproveitamento de assets:** todos os assets já existentes em `src/assets/` são mantidos.
+- **Sem mudanças em:** Navbar, Hero, PeNaAreia, Lazer, Quartos, Regiao, Galeria, Eventos, Depoimentos, Stats, Reservas, Footer, WhatsAppFloat, tema/cores no `index.css` e `tailwind.config.ts`.
 
-Tudo continua com a mesma identidade premium, mas com **textos legíveis sem precisar aproximar o rosto da tela**. Body 17px, contraste alto, eyebrows respiráveis, botões com presença real, e nenhum texto abaixo de 13px (exceto microcopy de copyright).
+---
+
+## Lista do que você precisa me enviar (resumo)
+
+1. **Gastronomia (4 fotos):** prato de frutos do mar · café da manhã / mesa posta · churrasco no deck · drink ao pôr do sol
+2. **Passeios (3 fotos):** expedição/trilha nas falésias · Canoa Quebrada · Lagoa do Uruaú ou Praia das Fontes
+3. **Equipe (1 foto):** equipe local da casa (pode ser cozinheira servindo, caseiro recebendo, etc.)
+
+Pode me mandar conforme tiver — eu vou substituindo os placeholders um a um.
