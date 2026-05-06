@@ -57,7 +57,11 @@ export const CasaInteira = () => {
           aspectRatio: "4/5",
         }}
       >
-        <div ref={ref} className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${casaConceitoPoster})` }}>
+        <div
+          ref={ref}
+          className="absolute inset-0 bg-cover bg-center overflow-hidden"
+          style={{ backgroundImage: `url(${casaConceitoPoster})` }}
+        >
           {shouldLoad && (
             <iframe
               src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_ID}&controls=0&modestbranding=1&rel=0&playsinline=1&iv_load_policy=3`}
@@ -65,14 +69,10 @@ export const CasaInteira = () => {
               loading="lazy"
               allow="autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
-              className="absolute inset-0 w-full h-full border-0 pointer-events-none"
+              className="absolute top-1/2 left-1/2 border-0 pointer-events-none"
               style={{
-                width: "177.78vh",
-                height: "56.25vw",
-                minWidth: "100%",
-                minHeight: "100%",
-                top: "50%",
-                left: "50%",
+                width: "100%",
+                height: "177.78%",
                 transform: "translate(-50%, -50%)",
               }}
             />
