@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import piscinaPergolado from "@/assets/piscina-pergolado.webp";
 import quadraVolei from "@/assets/quadra-volei.webp";
-import capela from "@/assets/externa-capela.webp";
+import capela from "@/assets/capela.jpg";
 import { fadeUp, stagger, maskReveal, viewportOnce, easeLuxe } from "@/lib/motion";
 
 const amenities = [
