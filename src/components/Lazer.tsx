@@ -31,8 +31,8 @@ export const Lazer = () => (
       <motion.div
         initial="hidden"
         whileInView="show"
-        viewport={viewportOnce}
-        variants={maskReveal}
+        viewport={{ once: true, amount: 0.1 }}
+        variants={fadeIn}
         className="relative"
       >
         <img
