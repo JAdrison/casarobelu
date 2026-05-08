@@ -45,8 +45,6 @@ export const Reservas = () => {
             <Users className="w-5 h-5 mt-0.5 text-gold shrink-0" strokeWidth={1.2} />
             <p style={{ fontSize: "15px", lineHeight: 1.55 }}>
               Capacidade até 25 pessoas
-              <br />
-              <span className="text-off-white/70">Grupos maiores sob consulta</span>
             </p>
           </div>
         </div>
