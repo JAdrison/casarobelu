@@ -1,5 +1,5 @@
 import { Instagram, MapPin, Phone, Mail } from "lucide-react";
-import logoRobelu from "@/assets/logo-robelu-transparent.png";
+import logoRobelu from "@/assets/logo-robelu.png";
 
 export const Footer = () => (
   <footer className="bg-dark-text text-off-white/80 px-5 sm:px-6 pt-16 sm:pt-20 pb-10">
